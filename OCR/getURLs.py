@@ -17,6 +17,7 @@ for j in search(query, tld='com', lang='en', tbs='0', safe='off', num=4, start=0
     list.append(j)
 
 p= {}
+lst = []
 for ur in list:
     x = []
     x.append(ur)
@@ -34,11 +35,14 @@ for ur in list:
         if len(x) > 20:
             break
     print("done")
+    #print(x)
     y = {x[0]:x}
-    filename = 'url.json'
-    entry = y
-    with open(filename, "r+") as file:
-        data = json.load(file)
-        data.append(entry)
-        file.seek(0)
-        json.dump(data, file)
+    print(y)
+    lst.append(y)
+filename = 'url.json'
+entry = y
+with open(filename, "r+") as file:
+    # data = json.load(file)
+    # data.append(entry)
+    # file.seek(0)
+    json.dump(entry, file)

@@ -62,11 +62,11 @@ def match_template(image, template):
 # listOfAllFiles = os.listdir('./download')
 # maxLeftIndex = max(listOfAllFiles)
 #leftIndex.append(listOfAllFiles[:dotIndex])
-for i in os.listdir('./download'):
-    try:
-        tt = time()
-        with timeout(12,exception = RuntimeError):
-
+for i in list(sorted(os.listdir('./download'))):
+        filePath = './download/'+str(i)
+        if os.path.getsize(filePath)>2*1024*1024:
+            continue
+        else:
     #Image loading
             image = cv2.imread('./download/'+ str(i))
     #Image data printing on different modes
@@ -83,8 +83,6 @@ for i in os.listdir('./download'):
             newfile = open("./textData/" + str(j) + ".txt", 'w')
             newfile.write(aOfImage + "\n" + bOfImage + "\n" + cOfImage + "\n" + dOfImage)
             newfile.close()
-    except RuntimeError:
-        pass
 
     
 

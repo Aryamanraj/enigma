@@ -18,10 +18,13 @@ def opening(f,preset):
     ss = "".join(ll)
     check = re.sub(' ','',ss)
     for i in preset:
-        rating+=check.count(i)
+        if i == "free":
+            for j in preset:
+                if j!="free":
+                    rating+=min(check.count(i),check.count(j))
     if rating == 0:
-        return rating
-    return log10(rating)+1
+        return (rating,f)
+    return (log10(rating)+1,f)
 allkeys(["thor"])
 for i in os.listdir('./textData'):
     print(opening('./textData/'+str(i),preset))
