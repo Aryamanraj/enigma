@@ -1,0 +1,391 @@
+(=) (sinup) =
+@ johndeverall/ opengraph-java Pubic
+Q Notitications = Fork 78 wy Star 13800
+<> Code © Issues 3 T2 Pullrequests 6 © Actions fF Projects O wiki a
+P master - coi le Aout
+A Java object representation of the
+Cx) johndeverall Merge pull request... on 3Feb 2018 ©34 Open Graph protocol for a web
+page
+QS examples/... Added support for OpenGrap... ‘years ago
+Readme
+& src Converted to maven project Gyeats 90 we 438 stars
+D gitignore Updating to exclude maven t... 6 yearsago — ® AL.watching
+() README.md Wording was bad iiyeatsago 78 forks
+DB pom.xml Updated name and description 6 years ago
+Releases
+i= README.md No releases published
+OpenGraph for Java is a small class used to represent the
+Open Graph protocol (available from Packages
+http://opengraphprotocol.org/) No packages published
+This project is entirely open source due to the size of the
+code, so please go nuts and do whatever you want with
+the code. Contributors 4
+Due to the lack of useful native DOM parsers this class Be.) callumj Callum Jones
+implements the HTMLCleaner library (available at .
+johndeverall John Deverall
+http://htmicleaner.sourceforge.net/index. php), please find
+the license for it at the bottom of this readme. There is the @ rkhmelyuk Ruslan khmelyuk
+hope to remove reliance on third party libraries at a later
+stage. @ niallkennedy Niall Kennedy
+@ Usage
+Languages
+In this example we will fetch the og:title and og:type
+————
+contents, while ignoring any errors if this page does not ‘© Java 100.0%
+comply with the Open Graph protocol standard (set in the
+constructor via true)
+OpenGraph testPage = new
+OpenGraph("http://uk.rottentomatoes.com/m/121770
+O-kick_ass", true);
+String title = testPage.getContent("title");
+String type = testPage.getContent("type");
+Another example (available in the examples/ folder)
+demonstrates the support for custom OpenGraph
+namespaces
+OpenGraph movie = new OpenGraph("http://www.rotte
+system.out.printin("Novie: " + movie.getContent("
+for (MetaElement director : movie.getProperties("
+{
+OpenGraph extendedInfo = director.getexte
+system.out.printin("Directed by: " + exte
+r
+for (MetaElement member : movie.getProperties("ca
+{
+OpenGraph extendedInfo = member .getExtend
+system.out.printIn("Starring: " + extende
+r
+@ Features
++ Uses the correct charset of the page during parsing
+(thanks to rkhmelyuk)
++ Support's the ability for social applications to declare
+their own namespaces and OpenGraph meta
++ Hashtable like representation of an Open Graph page
++ Output to HTML (render the meta data back out as
+tags)
++ Create OG data from scratch (the ability to use this
+class as a reverse and generate OG meta tags)
+License
+HTMLCleaner license (taken from
+http://htmicleaner.sourceforge.net/license.php)
+Copyright (c) 2006-2007, HtmiCleaner team
+ALL rights reserved.
+Redistribution and use of this software in source
+with or without modification, are permitted provi
+following conditions are met
+* Redistributions of source code must retain the
+copyright notice, this list of conditions and t
+Following disclaimer
+* Redistributions in binary form must reproduce t
+copyright notice, this list of conditions and t
+Following disclaimer in the documentation and/o
+materials provided with the distribution
+* The name of HtmlCleaner may not be used to endo
+products derived from this software without spe
+written permission.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, IN
+LIMITED To, THE IMPLIED WARRANTIES OF MERCHANTABI
+‘A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, I
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INC
+LIMITED To, PROCUREMENT OF SUBSTITUTE GOODS OR SE
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEV
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN AN
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBIL
+Terms Privacy Security Status Docs Contact GitHub Pricing API Training Blog About
+©) ©2022 cittiub, ine
+
+(=) (sinup) =
+@ johndeverall/ opengraph-java Pubic
+Q Notitications = Fork 78 wy Star 13800
+<> Code © Issues 3 T2 Pullrequests 6 © Actions fF Projects O wiki a
+P master - coi le Aout
+A Java object representation of the
+Cx) johndeverall Merge pull request... on 3Feb 2018 ©34 Open Graph protocol for a web
+page
+QS examples/... Added support for OpenGrap... ‘years ago
+Readme
+& src Converted to maven project Gyeats 90 we 438 stars
+D gitignore Updating to exclude maven t... 6 yearsago — ® AL.watching
+() README.md Wording was bad iiyeatsago 78 forks
+DB pom.xml Updated name and description 6 years ago
+Releases
+i= README.md No releases published
+OpenGraph for Java is a small class used to represent the
+Open Graph protocol (available from Packages
+http://opengraphprotocol.org/) No packages published
+This project is entirely open source due to the size of the
+code, so please go nuts and do whatever you want with
+the code. Contributors 4
+Due to the lack of useful native DOM parsers this class Be.) callumj Callum Jones
+implements the HTMLCleaner library (available at .
+johndeverall John Deverall
+http://htmicleaner.sourceforge.net/index. php), please find
+the license for it at the bottom of this readme. There is the @ rkhmelyuk Ruslan khmelyuk
+hope to remove reliance on third party libraries at a later
+stage. @ niallkennedy Niall Kennedy
+@ Usage
+Languages
+In this example we will fetch the og:title and og:type
+————
+contents, while ignoring any errors if this page does not ‘© Java 100.0%
+comply with the Open Graph protocol standard (set in the
+constructor via true)
+OpenGraph testPage = new
+OpenGraph("http://uk.rottentomatoes.com/m/121770
+O-kick_ass", true);
+String title = testPage.getContent("title");
+String type = testPage.getContent("type");
+Another example (available in the examples/ folder)
+demonstrates the support for custom OpenGraph
+namespaces
+OpenGraph movie = new OpenGraph("http://www.rotte
+system.out.printin("Novie: " + movie.getContent("
+for (MetaElement director : movie.getProperties("
+{
+OpenGraph extendedInfo = director.getexte
+system.out.printin("Directed by: " + exte
+r
+for (MetaElement member : movie.getProperties("ca
+{
+OpenGraph extendedInfo = member .getExtend
+system.out.printIn("Starring: " + extende
+r
+@ Features
++ Uses the correct charset of the page during parsing
+(thanks to rkhmelyuk)
++ Support's the ability for social applications to declare
+their own namespaces and OpenGraph meta
++ Hashtable like representation of an Open Graph page
++ Output to HTML (render the meta data back out as
+tags)
++ Create OG data from scratch (the ability to use this
+class as a reverse and generate OG meta tags)
+License
+HTMLCleaner license (taken from
+http://htmicleaner.sourceforge.net/license.php)
+Copyright (c) 2006-2007, HtmiCleaner team
+ALL rights reserved.
+Redistribution and use of this software in source
+with or without modification, are permitted provi
+following conditions are met
+* Redistributions of source code must retain the
+copyright notice, this list of conditions and t
+Following disclaimer
+* Redistributions in binary form must reproduce t
+copyright notice, this list of conditions and t
+Following disclaimer in the documentation and/o
+materials provided with the distribution
+* The name of HtmlCleaner may not be used to endo
+products derived from this software without spe
+written permission.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, IN
+LIMITED To, THE IMPLIED WARRANTIES OF MERCHANTABI
+‘A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, I
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INC
+LIMITED To, PROCUREMENT OF SUBSTITUTE GOODS OR SE
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEV
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN AN
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBIL
+Terms Privacy Security Status Docs Contact GitHub Pricing API Training Blog About
+©) ©2022 cittiub, ine
+
+(=) (sinup) =
+@ johndeverall/ opengraph-java Pubic
+Q Notitications = Fork 78 wy Star 13800
+<> Code © Issues 3 T2 Pullrequests 6 © Actions fF Projects O wiki a
+P master - coi le Aout
+A Java object representation of the
+Cx) johndeverall Merge pull request... on 3Feb 2018 ©34 Open Graph protocol for a web
+page
+QS examples/... Added support for OpenGrap... ‘years ago
+Readme
+& src Converted to maven project Gyeats 90 we 438 stars
+D gitignore Updating to exclude maven t... 6 yearsago — ® AL.watching
+() README.md Wording was bad iiyeatsago 78 forks
+DB pom.xml Updated name and description 6 years ago
+Releases
+i= README.md No releases published
+OpenGraph for Java is a small class used to represent the
+Open Graph protocol (available from Packages
+http://opengraphprotocol.org/) No packages published
+This project is entirely open source due to the size of the
+code, so please go nuts and do whatever you want with
+the code. Contributors 4
+Due to the lack of useful native DOM parsers this class Be.) callumj Callum Jones
+implements the HTMLCleaner library (available at .
+johndeverall John Deverall
+http://htmicleaner.sourceforge.net/index. php), please find
+the license for it at the bottom of this readme. There is the @ rkhmelyuk Ruslan khmelyuk
+hope to remove reliance on third party libraries at a later
+stage. @ niallkennedy Niall Kennedy
+@ Usage
+Languages
+In this example we will fetch the og:title and og:type
+————
+contents, while ignoring any errors if this page does not ‘© Java 100.0%
+comply with the Open Graph protocol standard (set in the
+constructor via true)
+OpenGraph testPage = new
+OpenGraph("http://uk.rottentomatoes.com/m/121770
+O-kick_ass", true);
+String title = testPage.getContent("title");
+String type = testPage.getContent("type");
+Another example (available in the examples/ folder)
+demonstrates the support for custom OpenGraph
+namespaces
+OpenGraph movie = new OpenGraph("http://www.rotte
+system.out.printin("Novie: " + movie.getContent("
+for (MetaElement director : movie.getProperties("
+{
+OpenGraph extendedInfo = director.getexte
+system.out.printin("Directed by: " + exte
+r
+for (MetaElement member : movie.getProperties("ca
+{
+OpenGraph extendedInfo = member .getExtend
+system.out.printIn("Starring: " + extende
+r
+@ Features
++ Uses the correct charset of the page during parsing
+(thanks to rkhmelyuk)
++ Support's the ability for social applications to declare
+their own namespaces and OpenGraph meta
++ Hashtable like representation of an Open Graph page
++ Output to HTML (render the meta data back out as
+tags)
++ Create OG data from scratch (the ability to use this
+class as a reverse and generate OG meta tags)
+License
+HTMLCleaner license (taken from
+http://htmicleaner.sourceforge.net/license.php)
+Copyright (c) 2006-2007, HtmiCleaner team
+ALL rights reserved.
+Redistribution and use of this software in source
+with or without modification, are permitted provi
+following conditions are met
+* Redistributions of source code must retain the
+copyright notice, this list of conditions and t
+Following disclaimer
+* Redistributions in binary form must reproduce t
+copyright notice, this list of conditions and t
+Following disclaimer in the documentation and/o
+materials provided with the distribution
+* The name of HtmlCleaner may not be used to endo
+products derived from this software without spe
+written permission.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, IN
+LIMITED To, THE IMPLIED WARRANTIES OF MERCHANTABI
+‘A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, I
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INC
+LIMITED To, PROCUREMENT OF SUBSTITUTE GOODS OR SE
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEV
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN AN
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBIL
+Terms Privacy Security Status Docs Contact GitHub Pricing API Training Blog About
+©) ©2022 cittiub, ine
+
+(=) (sinup) =
+@ johndeverall/ opengraph-java Pubic
+Q Notitications = Fork 78 wy Star 13800
+<> Code © Issues 3 T2 Pullrequests 6 © Actions fF Projects O wiki a
+P master - coi le Aout
+A Java object representation of the
+Cx) johndeverall Merge pull request... on 3Feb 2018 ©34 Open Graph protocol for a web
+page
+QS examples/... Added support for OpenGrap... ‘years ago
+Readme
+& src Converted to maven project Gyeats 90 we 438 stars
+D gitignore Updating to exclude maven t... 6 yearsago — ® AL.watching
+() README.md Wording was bad iiyeatsago 78 forks
+DB pom.xml Updated name and description 6 years ago
+Releases
+i= README.md No releases published
+OpenGraph for Java is a small class used to represent the
+Open Graph protocol (available from Packages
+http://opengraphprotocol.org/) No packages published
+This project is entirely open source due to the size of the
+code, so please go nuts and do whatever you want with
+the code. Contributors 4
+Due to the lack of useful native DOM parsers this class Be.) callumj Callum Jones
+implements the HTMLCleaner library (available at .
+johndeverall John Deverall
+http://htmicleaner.sourceforge.net/index. php), please find
+the license for it at the bottom of this readme. There is the @ rkhmelyuk Ruslan khmelyuk
+hope to remove reliance on third party libraries at a later
+stage. @ niallkennedy Niall Kennedy
+@ Usage
+Languages
+In this example we will fetch the og:title and og:type
+————
+contents, while ignoring any errors if this page does not ‘© Java 100.0%
+comply with the Open Graph protocol standard (set in the
+constructor via true)
+OpenGraph testPage = new
+OpenGraph("http://uk.rottentomatoes.com/m/121770
+O-kick_ass", true);
+String title = testPage.getContent("title");
+String type = testPage.getContent("type");
+Another example (available in the examples/ folder)
+demonstrates the support for custom OpenGraph
+namespaces
+OpenGraph movie = new OpenGraph("http://www.rotte
+system.out.printin("Novie: " + movie.getContent("
+for (MetaElement director : movie.getProperties("
+{
+OpenGraph extendedInfo = director.getexte
+system.out.printin("Directed by: " + exte
+r
+for (MetaElement member : movie.getProperties("ca
+{
+OpenGraph extendedInfo = member .getExtend
+system.out.printIn("Starring: " + extende
+r
+@ Features
++ Uses the correct charset of the page during parsing
+(thanks to rkhmelyuk)
++ Support's the ability for social applications to declare
+their own namespaces and OpenGraph meta
++ Hashtable like representation of an Open Graph page
++ Output to HTML (render the meta data back out as
+tags)
++ Create OG data from scratch (the ability to use this
+class as a reverse and generate OG meta tags)
+License
+HTMLCleaner license (taken from
+http://htmicleaner.sourceforge.net/license.php)
+Copyright (c) 2006-2007, HtmiCleaner team
+ALL rights reserved.
+Redistribution and use of this software in source
+with or without modification, are permitted provi
+following conditions are met
+* Redistributions of source code must retain the
+copyright notice, this list of conditions and t
+Following disclaimer
+* Redistributions in binary form must reproduce t
+copyright notice, this list of conditions and t
+Following disclaimer in the documentation and/o
+materials provided with the distribution
+* The name of HtmlCleaner may not be used to endo
+products derived from this software without spe
+written permission.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, IN
+LIMITED To, THE IMPLIED WARRANTIES OF MERCHANTABI
+‘A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, I
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INC
+LIMITED To, PROCUREMENT OF SUBSTITUTE GOODS OR SE
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEV
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN AN
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBIL
+Terms Privacy Security Status Docs Contact GitHub Pricing API Training Blog About
+©) ©2022 cittiub, ine

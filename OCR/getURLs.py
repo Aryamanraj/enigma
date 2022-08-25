@@ -8,12 +8,12 @@ try:
     from googlesearch import search
 except ImportError:
     print("No module named 'google' found")
-not_chek = ["www.imdb.com", "www.pinterest.com","www.sonyliv.com"]
+not_chek = ["imdb", "pinterest","sonyliv","hotstar","netflix","amazon","twitch", "facebook", "appstore", "playstore", "font"]
 # to search
 query = input('What you want to search?\n')
 list = []
 
-for j in search(query, tld='com', lang='en', tbs='0', safe='off', num=4, start=0, stop=4, pause=2.0, country='', extra_params=None, user_agent=None, verify_ssl=True):
+for j in search(query, tld='com', lang='en', tbs='0', safe='off', num=5, start=0, stop=5, pause=2.0, country='India', extra_params=None, user_agent=None, verify_ssl=True):
     list.append(j)
 
 p= {}
@@ -32,15 +32,25 @@ for ur in list:
             if k.startswith("http") and not k.endswith("jpg") and not k.endswith("png") and "php" not in k and not k.endswith("js") and "wp-content" not in k and "google" not in k and "css" not in k:
                 if k not in x:
                     x.append(k)
-        if len(x) > 20:
+        if len(x) > 10:
             break
     print("done")
+    newx = []
+    for i in x:
+        for j in not_chek:
+            flag = 0
+            if j in i:
+                flag = 1
+                break
+        if flag == 0:
+                newx.append(i)
+    print(newx)
     #print(x)
-    y = {x[0]:x}
-    print(y)
+    y = {newx[0]:newx}
+    #print(y)
     lst.append(y)
 filename = 'url.json'
-entry = y
+entry = lst
 with open(filename, "r+") as file:
     # data = json.load(file)
     # data.append(entry)

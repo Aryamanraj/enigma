@@ -1,0 +1,335 @@
+x
+Ey »
+= Toby Inkster’s Open Graph Protocol Page
+3
+8 See opengraphprotocol.org for an explanation of what Open Graph Protocol is.
+N Ive created three different Open Graph Protocol parsers.
+a
+Open Graph Protocol to JSON
+ARESTIul web service intended for quick page testing (not large-scale/regular use).
+RDF-RDFa-Parser
+‘An RDFa parsing library for the Perl programming language. This offers shortcuts for parsing
+Open Graph Protocol data.
+OpenGraphNode.php
+Asimple Open Graph Protocol parser for PHP (see below for more info).
+OpenGraphNode.php
+Latest version: 20110224 (ZIP) (Bzip2)
+Installation
+Copy OpenGraphNode.php and the "arc" folder to your web server.
+Requires PHP 5+. (Version 20100427 supports PHP 4.x.)
+Basic Usage
+include "OpenGraphNode..php";
+# Fetch and parse a URL
+#
+Spage = "http: //waw.rottentomatoes..com/m/oceans_eleven/";
+Snode = new OpenGraphNode(Spage) ;
+# Retrieve the title
+#
+print Snode->title . "\n";  # Like this
+print Snode->titte() . "\n"; # or with parentheses
+# And obviously the above works for other Open Graph Protocol
+# properties like "image", "description", etc. For properties
+# that contain a hyphen, you'll need to use underscore instead:
+#
+print $node->street_address . "\n";
+# OpenGraphNode uses PHP5's Iterator feature, so you can
+# Loop through it like an array.
+#
+foreach (Snode as $key => $value) {
+print "Skey => $value\n";
+t
+Advanced Usage
+# What if a page has multiple <meta property="og:title"> elenents?
+#
+Stitles = Snode->title(TRUE); # return an array
+print_r(Stitles);
+# This gets a key=>value array of all properties.
+#
+Sall = $node->ALL();
+print_r($all);
+# And this gets a key=>array of_values array of all properties.
+#
+Sall = Snode->ALL(TRUE) ;
+print_r($all);
+# The Open Graph Protocol is based on RDFa, and OpenGraphNode. php
+# is powered by a full-fledged RDFa parser. You can access all
+# the page's RDFa data if you like!
+#
+Sdata = Snode->RDFa();
+# Return the URL of the page (after following any redirections)
+#
+Surl = Snode->Base();
+Author
+Toby Inkster <http://tobyinkster.co.uk/>.
+Licence
+Choose your favourite of:
++ <http:/www.gnu.org/licenses/gpl-3.0.htm|>
+« <http:/www.gnu.orgilicenses/gpl-2.0.htm|>
++ <http:/www.w3.org/Consortium/Legal/2002/copyright-software-20021231>
+Support / Warranty
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
+even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+For support, try the OGP developers’ mailing list <http://groups.google.com/group/open-graph-
+protocol.
+Name Last modified Size Description
+@® Parent Directory I.
+@ _ogp-20110224/ 2011-02-24 23:44 -
+[PF] ogp-20100427.tar.bz2 2010-04-27 21:23 72k
+iP ogp-20100427.zip 2010-04-27 21:23 134K
+[PF] cgp-20110131.tar.b22 2011-01-31 10:59 72k
+WP ogp-20110131.zip 2011-01-31 11:00 136K
+[PF] cgp-20110224.tar.bz 2011-02-24 23:45 72k
+iP ogp-20110224.zip 2011-02-24 23:45 136K
+Apache/2.4.41 (Ubuntu) Server at buzzword.org.uk Port 443
+
+x
+Ey »
+= Toby Inkster’s Open Graph Protocol Page
+3
+8 See opengraphprotocol.org for an explanation of what Open Graph Protocol is.
+N Ive created three different Open Graph Protocol parsers.
+a
+Open Graph Protocol to JSON
+ARESTIul web service intended for quick page testing (not large-scale/regular use).
+RDF-RDFa-Parser
+‘An RDFa parsing library for the Perl programming language. This offers shortcuts for parsing
+Open Graph Protocol data.
+OpenGraphNode.php
+Asimple Open Graph Protocol parser for PHP (see below for more info).
+OpenGraphNode.php
+Latest version: 20110224 (ZIP) (Bzip2)
+Installation
+Copy OpenGraphNode.php and the "arc" folder to your web server.
+Requires PHP 5+. (Version 20100427 supports PHP 4.x.)
+Basic Usage
+include "OpenGraphNode..php";
+# Fetch and parse a URL
+#
+Spage = "http: //waw.rottentomatoes..com/m/oceans_eleven/";
+Snode = new OpenGraphNode(Spage) ;
+# Retrieve the title
+#
+print Snode->title . "\n";  # Like this
+print Snode->titte() . "\n"; # or with parentheses
+# And obviously the above works for other Open Graph Protocol
+# properties like "image", "description", etc. For properties
+# that contain a hyphen, you'll need to use underscore instead:
+#
+print $node->street_address . "\n";
+# OpenGraphNode uses PHP5's Iterator feature, so you can
+# Loop through it like an array.
+#
+foreach (Snode as $key => $value) {
+print "Skey => $value\n";
+t
+Advanced Usage
+# What if a page has multiple <meta property="og:title"> elenents?
+#
+Stitles = Snode->title(TRUE); # return an array
+print_r(Stitles);
+# This gets a key=>value array of all properties.
+#
+Sall = $node->ALL();
+print_r($all);
+# And this gets a key=>array of_values array of all properties.
+#
+Sall = Snode->ALL(TRUE) ;
+print_r($all);
+# The Open Graph Protocol is based on RDFa, and OpenGraphNode. php
+# is powered by a full-fledged RDFa parser. You can access all
+# the page's RDFa data if you like!
+#
+Sdata = Snode->RDFa();
+# Return the URL of the page (after following any redirections)
+#
+Surl = Snode->Base();
+Author
+Toby Inkster <http://tobyinkster.co.uk/>.
+Licence
+Choose your favourite of:
++ <http:/www.gnu.org/licenses/gpl-3.0.htm|>
+« <http:/www.gnu.orgilicenses/gpl-2.0.htm|>
++ <http:/www.w3.org/Consortium/Legal/2002/copyright-software-20021231>
+Support / Warranty
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
+even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+For support, try the OGP developers’ mailing list <http://groups.google.com/group/open-graph-
+protocol.
+Name Last modified Size Description
+@® Parent Directory I.
+@ _ogp-20110224/ 2011-02-24 23:44 -
+[PF] ogp-20100427.tar.bz2 2010-04-27 21:23 72k
+iP ogp-20100427.zip 2010-04-27 21:23 134K
+[PF] cgp-20110131.tar.b22 2011-01-31 10:59 72k
+WP ogp-20110131.zip 2011-01-31 11:00 136K
+[PF] cgp-20110224.tar.bz 2011-02-24 23:45 72k
+iP ogp-20110224.zip 2011-02-24 23:45 136K
+Apache/2.4.41 (Ubuntu) Server at buzzword.org.uk Port 443
+
+x
+Ey »
+= Toby Inkster’s Open Graph Protocol Page
+3
+8 See opengraphprotocol.org for an explanation of what Open Graph Protocol is.
+N Ive created three different Open Graph Protocol parsers.
+a
+Open Graph Protocol to JSON
+ARESTIul web service intended for quick page testing (not large-scale/regular use).
+RDF-RDFa-Parser
+‘An RDFa parsing library for the Perl programming language. This offers shortcuts for parsing
+Open Graph Protocol data.
+OpenGraphNode.php
+Asimple Open Graph Protocol parser for PHP (see below for more info).
+OpenGraphNode.php
+Latest version: 20110224 (ZIP) (Bzip2)
+Installation
+Copy OpenGraphNode.php and the "arc" folder to your web server.
+Requires PHP 5+. (Version 20100427 supports PHP 4.x.)
+Basic Usage
+include "OpenGraphNode..php";
+# Fetch and parse a URL
+#
+Spage = "http: //waw.rottentomatoes..com/m/oceans_eleven/";
+Snode = new OpenGraphNode(Spage) ;
+# Retrieve the title
+#
+print Snode->title . "\n";  # Like this
+print Snode->titte() . "\n"; # or with parentheses
+# And obviously the above works for other Open Graph Protocol
+# properties like "image", "description", etc. For properties
+# that contain a hyphen, you'll need to use underscore instead:
+#
+print $node->street_address . "\n";
+# OpenGraphNode uses PHP5's Iterator feature, so you can
+# Loop through it like an array.
+#
+foreach (Snode as $key => $value) {
+print "Skey => $value\n";
+t
+Advanced Usage
+# What if a page has multiple <meta property="og:title"> elenents?
+#
+Stitles = Snode->title(TRUE); # return an array
+print_r(Stitles);
+# This gets a key=>value array of all properties.
+#
+Sall = $node->ALL();
+print_r($all);
+# And this gets a key=>array of_values array of all properties.
+#
+Sall = Snode->ALL(TRUE) ;
+print_r($all);
+# The Open Graph Protocol is based on RDFa, and OpenGraphNode. php
+# is powered by a full-fledged RDFa parser. You can access all
+# the page's RDFa data if you like!
+#
+Sdata = Snode->RDFa();
+# Return the URL of the page (after following any redirections)
+#
+Surl = Snode->Base();
+Author
+Toby Inkster <http://tobyinkster.co.uk/>.
+Licence
+Choose your favourite of:
++ <http:/www.gnu.org/licenses/gpl-3.0.htm|>
+« <http:/www.gnu.orgilicenses/gpl-2.0.htm|>
++ <http:/www.w3.org/Consortium/Legal/2002/copyright-software-20021231>
+Support / Warranty
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
+even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+For support, try the OGP developers’ mailing list <http://groups.google.com/group/open-graph-
+protocol.
+Name Last modified Size Description
+@® Parent Directory I.
+@ _ogp-20110224/ 2011-02-24 23:44 -
+[PF] ogp-20100427.tar.bz2 2010-04-27 21:23 72k
+iP ogp-20100427.zip 2010-04-27 21:23 134K
+[PF] cgp-20110131.tar.b22 2011-01-31 10:59 72k
+WP ogp-20110131.zip 2011-01-31 11:00 136K
+[PF] cgp-20110224.tar.bz 2011-02-24 23:45 72k
+iP ogp-20110224.zip 2011-02-24 23:45 136K
+Apache/2.4.41 (Ubuntu) Server at buzzword.org.uk Port 443
+
+x
+Ey »
+= Toby Inkster’s Open Graph Protocol Page
+3
+8 See opengraphprotocol.org for an explanation of what Open Graph Protocol is.
+N Ive created three different Open Graph Protocol parsers.
+a
+Open Graph Protocol to JSON
+ARESTIul web service intended for quick page testing (not large-scale/regular use).
+RDF-RDFa-Parser
+‘An RDFa parsing library for the Perl programming language. This offers shortcuts for parsing
+Open Graph Protocol data.
+OpenGraphNode.php
+Asimple Open Graph Protocol parser for PHP (see below for more info).
+OpenGraphNode.php
+Latest version: 20110224 (ZIP) (Bzip2)
+Installation
+Copy OpenGraphNode.php and the "arc" folder to your web server.
+Requires PHP 5+. (Version 20100427 supports PHP 4.x.)
+Basic Usage
+include "OpenGraphNode..php";
+# Fetch and parse a URL
+#
+Spage = "http: //waw.rottentomatoes..com/m/oceans_eleven/";
+Snode = new OpenGraphNode(Spage) ;
+# Retrieve the title
+#
+print Snode->title . "\n";  # Like this
+print Snode->titte() . "\n"; # or with parentheses
+# And obviously the above works for other Open Graph Protocol
+# properties like "image", "description", etc. For properties
+# that contain a hyphen, you'll need to use underscore instead:
+#
+print $node->street_address . "\n";
+# OpenGraphNode uses PHP5's Iterator feature, so you can
+# Loop through it like an array.
+#
+foreach (Snode as $key => $value) {
+print "Skey => $value\n";
+t
+Advanced Usage
+# What if a page has multiple <meta property="og:title"> elenents?
+#
+Stitles = Snode->title(TRUE); # return an array
+print_r(Stitles);
+# This gets a key=>value array of all properties.
+#
+Sall = $node->ALL();
+print_r($all);
+# And this gets a key=>array of_values array of all properties.
+#
+Sall = Snode->ALL(TRUE) ;
+print_r($all);
+# The Open Graph Protocol is based on RDFa, and OpenGraphNode. php
+# is powered by a full-fledged RDFa parser. You can access all
+# the page's RDFa data if you like!
+#
+Sdata = Snode->RDFa();
+# Return the URL of the page (after following any redirections)
+#
+Surl = Snode->Base();
+Author
+Toby Inkster <http://tobyinkster.co.uk/>.
+Licence
+Choose your favourite of:
++ <http:/www.gnu.org/licenses/gpl-3.0.htm|>
+« <http:/www.gnu.orgilicenses/gpl-2.0.htm|>
++ <http:/www.w3.org/Consortium/Legal/2002/copyright-software-20021231>
+Support / Warranty
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
+even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+For support, try the OGP developers’ mailing list <http://groups.google.com/group/open-graph-
+protocol.
+Name Last modified Size Description
+@® Parent Directory I.
+@ _ogp-20110224/ 2011-02-24 23:44 -
+[PF] ogp-20100427.tar.bz2 2010-04-27 21:23 72k
+iP ogp-20100427.zip 2010-04-27 21:23 134K
+[PF] cgp-20110131.tar.b22 2011-01-31 10:59 72k
+WP ogp-20110131.zip 2011-01-31 11:00 136K
+[PF] cgp-20110224.tar.bz 2011-02-24 23:45 72k
+iP ogp-20110224.zip 2011-02-24 23:45 136K
+Apache/2.4.41 (Ubuntu) Server at buzzword.org.uk Port 443

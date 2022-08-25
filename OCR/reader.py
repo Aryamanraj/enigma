@@ -4,6 +4,7 @@ import pytesseract
 import os
 import time
 from interruptingcow import timeout
+from multiprocessing import Process
 
 # get grayscale image
 def get_grayscale(image):
@@ -62,28 +63,32 @@ def match_template(image, template):
 # listOfAllFiles = os.listdir('./download')
 # maxLeftIndex = max(listOfAllFiles)
 #leftIndex.append(listOfAllFiles[:dotIndex])
-for i in list(sorted(os.listdir('./download'))):
-        filePath = './download/'+str(i)
-        if os.path.getsize(filePath)>2*1024*1024:
-            continue
-        else:
+def fin():
+    for i in list(sorted(os.listdir('./download'))):
+            filePath = './download/'+str(i)
+            if os.path.getsize(filePath)>2*1024*1024:
+                continue
+            else:
     #Image loading
-            image = cv2.imread('./download/'+ str(i))
+                image = cv2.imread('./download/'+ str(i))
     #Image data printing on different modes
-            custom_config = r'--oem 3 --psm 6'
-            aOfImage = str(pytesseract.image_to_string(image, config=custom_config))
+                custom_config = r'--oem 3 --psm 6'
+            
+                aOfImage = str(pytesseract.image_to_string(image, config=custom_config))
 
-            bOfImage = str(pytesseract.image_to_string(image, config=custom_config))
+                bOfImage = str(pytesseract.image_to_string(image, config=custom_config))
 
-            cOfImage = str(pytesseract.image_to_string(image, config=custom_config))
+                cOfImage = str(pytesseract.image_to_string(image, config=custom_config))
 
-            dOfImage = str(pytesseract.image_to_string(image, config=custom_config))
+                dOfImage = str(pytesseract.image_to_string(image, config=custom_config))
 
-            j = os.path.splitext(i)[0]
-            newfile = open("./textData/" + str(j) + ".txt", 'w')
-            newfile.write(aOfImage + "\n" + bOfImage + "\n" + cOfImage + "\n" + dOfImage)
-            newfile.close()
-
+                j = os.path.splitext(i)[0]
+                newfile = open("./textData/" + str(j) + ".txt", 'w')
+                newfile.write(aOfImage + "\n" + bOfImage + "\n" + cOfImage + "\n" + dOfImage)
+                newfile.close()
+pro1 = Process(target=fin)
+pro1.start()
+pro1.join()
     
 
     

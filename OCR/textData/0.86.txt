@@ -1,0 +1,551 @@
+(=) (sinup) =
+@ niallkennedy/open-graph-protocol-tools Pubic
+Q Notitications = Fork 75 Wy Star 2440
+<> Code © Issues 2 T2 Pullrequests 2 © Actions fF Projects O wiki a
+P maser + cot fe About
+Open Graph Protocol validator
+@ niallkennedy update list of Fa... =» on 22May 2015 43
+@ ogp.mel
+( README.md consistent spacing il years ago] Readme
+( media.php tabs instead of spaces 10 years ago wy 244 stars
+1 objects.php  addWriter() changes to stayc... 10 yearsago | © 29 watching
+Y 75 forks
+1 open-grap... update list of Facebook locales, 7 years ago
+= README.md Releases
+No releases published
+¢ Open Graph protocol
+Packages
+No packages published
+Contributors 2
+@ niallkennedy Niall Kennedy
+oh erunion Jon Ursenbach
+Languages
+———————
+© PHP 100.0%
+Open Graph protocol enhances information associated
+with a webpage through key-value pairs included as
+<meta> elements in your HTML. This additional data is
+consumed by social sharing sites, populating a story
+preview for shared links and referenced objects in the
+social graph
+This project includes tools to validate and sanitize inputs
+before generating Open Graph protocol markup on your
+webpages. This project standardizes outputs for easy
+indexing by consuming agents.
+¢ Consuming agents
+@ Facebook
+Facebook indexes Open Graph protocol markup found on
+pages shared in a member's social news feed. This
+markup also enhances social news feed stories generated
+by the Like button social plugin and Facebook Share.
+Open Graph protocol markup turns webpages into objects
+within the Facebook social graph, increasing search
+exposure and uniquely classifying your site and story type
+within the social news feed.
+The Facebook Object Debugger displays a Facebook
+interpretation of your site's Open Graph protocol content.
+2 mixi Check
+Mixi indexes Open Graph protocol markup in its mixi
+Check social sharing service.
+2 Google+ Snippet
+Google indexes Open Graph protocol markup to populate
+a Google+ activity post.
+? Sample code
+@ Core Open Graph protocol
+Support for structured properties for image, video, and
+audio objects.
+<?php
+Simage = new OpenGraphProtocoltmage( );
+Simage->setURL( 'http://example.com/image.jpg' );
+Simage->setSecureURL( 'https://example.com/image.
+Simage->setType( image/jpeg" );
+Simage->setWidth( 400 );
+Simage->setHeight( 200 );
+Svideo = new OpenGraphProtocolVideo( );
+Svideo->setURL( 'http://example.com/video. swt" );
+Svideo->setSecureURL( 'https://example.com/video.
+Svideo->setType( OpenGraphProtocolWVideo: :extensic
+Svideo->setWidth( 500 );
+Svideo->setHeight( 400 );
+Saudio = new OpenGraphProtocolaudio( );
+Saudio->setURL( 'http://example.com/audio.mp3" );
+Saudio->setSecureURL( 'https://example.com/audio.
+Saudio->setType('audio/mpeg' );
+>
+Declare a new openéraphProtocot object and set some
+properties. Add structured media objects.
+<?php
+Sogp = new OpenGraphProtocol();
+Sogp->setLocale( ‘en_US’ );
+Sogp->setSiteName( ‘Happy place’ );
+Sogp->setTitle( ‘Hello world" );
+Sogp->setDescription( 'We make the world happy.'
+Sogp->setType( 'website' );
+Sogp->setURL( 'http://example.com/' );
+Sogp->setDeterminer( ‘the’ );
+Sogp->addImage(Simage) ;
+Sogp->addAudio(Saudio) ;
+Sogp->addVideo($video) ;
+>
+Output your OpenGraphProtocol object as HTML <meta>
+elements. Default configuration uses the property
+attribute from RDFa. Change to name if you prefer HTML
+specification compliance and consuming agents support
+the name attribute as a property fallback.
+<?php
+Sogp->toHTML();
+>
+Global objects
+Build global objects and attributes. Set time values using
+either an ISO 8601 formatted string or a DateTime object.
+DateTimes will be converted to the UTC timezone before
+output for consistency.
+<?php
+Sarticle = new OpenGraphProtocolarticle();
+Sarticle->setPublishedTime( '2011-11-03T01:23:452
+Sarticle->setModifiedTime( new DateTime( ‘now’, n
+Sarticle->setExpirationTime( '2011-12-31T23:59:59
+Sarticle->setSection( 'Front page’ );
+Sarticle->addTag( ‘weather’ );
+Sarticle->addTag( ‘football’ );
+Sarticle->addAuthor( 'http://example.com/author -h
+>
+Convert a global object to <meta> elements just as you
+would with openGraphProtocot.
+<?php
+Sarticle->toHTML();
+>
+¢ Combined
+Acommon use case might be storing Open Graph
+protocol objects in a Controller for use by your web
+application. You can add each object to an array and later
+iterate through the array for <head prefix=""> and
+<meta> outputs.
+<?php
+Sogp_objects = array( Sogp, Sarticle );
+Sprefix = '';
+Smeta = '';
+foreach ( Sogp_objects as Sogp_object ) {
+Sprefix .= Sogp_object::PREFIX . ': ' . Sogp_
+Smeta .= Sogp_object->toHTML() . PHP_EOL;
+r
+a
+<head prefix="<?php echo rtrim( Sprefix,' ' ); 2
+<2php echo rtrim( Smeta, PHP EOL ); ?>
+</nead>
+Terms Privacy Security Status Docs Contact GitHub Pricing API Training Blog About
+©) ©2022 cittiub, ine
+
+(=) (sinup) =
+@ niallkennedy/open-graph-protocol-tools Pubic
+Q Notitications = Fork 75 Wy Star 2440
+<> Code © Issues 2 T2 Pullrequests 2 © Actions fF Projects O wiki a
+P maser + cot fe About
+Open Graph Protocol validator
+@ niallkennedy update list of Fa... =» on 22May 2015 43
+@ ogp.mel
+( README.md consistent spacing il years ago] Readme
+( media.php tabs instead of spaces 10 years ago wy 244 stars
+1 objects.php  addWriter() changes to stayc... 10 yearsago | © 29 watching
+Y 75 forks
+1 open-grap... update list of Facebook locales, 7 years ago
+= README.md Releases
+No releases published
+¢ Open Graph protocol
+Packages
+No packages published
+Contributors 2
+@ niallkennedy Niall Kennedy
+oh erunion Jon Ursenbach
+Languages
+———————
+© PHP 100.0%
+Open Graph protocol enhances information associated
+with a webpage through key-value pairs included as
+<meta> elements in your HTML. This additional data is
+consumed by social sharing sites, populating a story
+preview for shared links and referenced objects in the
+social graph
+This project includes tools to validate and sanitize inputs
+before generating Open Graph protocol markup on your
+webpages. This project standardizes outputs for easy
+indexing by consuming agents.
+¢ Consuming agents
+@ Facebook
+Facebook indexes Open Graph protocol markup found on
+pages shared in a member's social news feed. This
+markup also enhances social news feed stories generated
+by the Like button social plugin and Facebook Share.
+Open Graph protocol markup turns webpages into objects
+within the Facebook social graph, increasing search
+exposure and uniquely classifying your site and story type
+within the social news feed.
+The Facebook Object Debugger displays a Facebook
+interpretation of your site's Open Graph protocol content.
+2 mixi Check
+Mixi indexes Open Graph protocol markup in its mixi
+Check social sharing service.
+2 Google+ Snippet
+Google indexes Open Graph protocol markup to populate
+a Google+ activity post.
+? Sample code
+@ Core Open Graph protocol
+Support for structured properties for image, video, and
+audio objects.
+<?php
+Simage = new OpenGraphProtocoltmage( );
+Simage->setURL( 'http://example.com/image.jpg' );
+Simage->setSecureURL( 'https://example.com/image.
+Simage->setType( image/jpeg" );
+Simage->setWidth( 400 );
+Simage->setHeight( 200 );
+Svideo = new OpenGraphProtocolVideo( );
+Svideo->setURL( 'http://example.com/video. swt" );
+Svideo->setSecureURL( 'https://example.com/video.
+Svideo->setType( OpenGraphProtocolWVideo: :extensic
+Svideo->setWidth( 500 );
+Svideo->setHeight( 400 );
+Saudio = new OpenGraphProtocolaudio( );
+Saudio->setURL( 'http://example.com/audio.mp3" );
+Saudio->setSecureURL( 'https://example.com/audio.
+Saudio->setType('audio/mpeg' );
+>
+Declare a new openéraphProtocot object and set some
+properties. Add structured media objects.
+<?php
+Sogp = new OpenGraphProtocol();
+Sogp->setLocale( ‘en_US’ );
+Sogp->setSiteName( ‘Happy place’ );
+Sogp->setTitle( ‘Hello world" );
+Sogp->setDescription( 'We make the world happy.'
+Sogp->setType( 'website' );
+Sogp->setURL( 'http://example.com/' );
+Sogp->setDeterminer( ‘the’ );
+Sogp->addImage(Simage) ;
+Sogp->addAudio(Saudio) ;
+Sogp->addVideo($video) ;
+>
+Output your OpenGraphProtocol object as HTML <meta>
+elements. Default configuration uses the property
+attribute from RDFa. Change to name if you prefer HTML
+specification compliance and consuming agents support
+the name attribute as a property fallback.
+<?php
+Sogp->toHTML();
+>
+Global objects
+Build global objects and attributes. Set time values using
+either an ISO 8601 formatted string or a DateTime object.
+DateTimes will be converted to the UTC timezone before
+output for consistency.
+<?php
+Sarticle = new OpenGraphProtocolarticle();
+Sarticle->setPublishedTime( '2011-11-03T01:23:452
+Sarticle->setModifiedTime( new DateTime( ‘now’, n
+Sarticle->setExpirationTime( '2011-12-31T23:59:59
+Sarticle->setSection( 'Front page’ );
+Sarticle->addTag( ‘weather’ );
+Sarticle->addTag( ‘football’ );
+Sarticle->addAuthor( 'http://example.com/author -h
+>
+Convert a global object to <meta> elements just as you
+would with openGraphProtocot.
+<?php
+Sarticle->toHTML();
+>
+¢ Combined
+Acommon use case might be storing Open Graph
+protocol objects in a Controller for use by your web
+application. You can add each object to an array and later
+iterate through the array for <head prefix=""> and
+<meta> outputs.
+<?php
+Sogp_objects = array( Sogp, Sarticle );
+Sprefix = '';
+Smeta = '';
+foreach ( Sogp_objects as Sogp_object ) {
+Sprefix .= Sogp_object::PREFIX . ': ' . Sogp_
+Smeta .= Sogp_object->toHTML() . PHP_EOL;
+r
+a
+<head prefix="<?php echo rtrim( Sprefix,' ' ); 2
+<2php echo rtrim( Smeta, PHP EOL ); ?>
+</nead>
+Terms Privacy Security Status Docs Contact GitHub Pricing API Training Blog About
+©) ©2022 cittiub, ine
+
+(=) (sinup) =
+@ niallkennedy/open-graph-protocol-tools Pubic
+Q Notitications = Fork 75 Wy Star 2440
+<> Code © Issues 2 T2 Pullrequests 2 © Actions fF Projects O wiki a
+P maser + cot fe About
+Open Graph Protocol validator
+@ niallkennedy update list of Fa... =» on 22May 2015 43
+@ ogp.mel
+( README.md consistent spacing il years ago] Readme
+( media.php tabs instead of spaces 10 years ago wy 244 stars
+1 objects.php  addWriter() changes to stayc... 10 yearsago | © 29 watching
+Y 75 forks
+1 open-grap... update list of Facebook locales, 7 years ago
+= README.md Releases
+No releases published
+¢ Open Graph protocol
+Packages
+No packages published
+Contributors 2
+@ niallkennedy Niall Kennedy
+oh erunion Jon Ursenbach
+Languages
+———————
+© PHP 100.0%
+Open Graph protocol enhances information associated
+with a webpage through key-value pairs included as
+<meta> elements in your HTML. This additional data is
+consumed by social sharing sites, populating a story
+preview for shared links and referenced objects in the
+social graph
+This project includes tools to validate and sanitize inputs
+before generating Open Graph protocol markup on your
+webpages. This project standardizes outputs for easy
+indexing by consuming agents.
+¢ Consuming agents
+@ Facebook
+Facebook indexes Open Graph protocol markup found on
+pages shared in a member's social news feed. This
+markup also enhances social news feed stories generated
+by the Like button social plugin and Facebook Share.
+Open Graph protocol markup turns webpages into objects
+within the Facebook social graph, increasing search
+exposure and uniquely classifying your site and story type
+within the social news feed.
+The Facebook Object Debugger displays a Facebook
+interpretation of your site's Open Graph protocol content.
+2 mixi Check
+Mixi indexes Open Graph protocol markup in its mixi
+Check social sharing service.
+2 Google+ Snippet
+Google indexes Open Graph protocol markup to populate
+a Google+ activity post.
+? Sample code
+@ Core Open Graph protocol
+Support for structured properties for image, video, and
+audio objects.
+<?php
+Simage = new OpenGraphProtocoltmage( );
+Simage->setURL( 'http://example.com/image.jpg' );
+Simage->setSecureURL( 'https://example.com/image.
+Simage->setType( image/jpeg" );
+Simage->setWidth( 400 );
+Simage->setHeight( 200 );
+Svideo = new OpenGraphProtocolVideo( );
+Svideo->setURL( 'http://example.com/video. swt" );
+Svideo->setSecureURL( 'https://example.com/video.
+Svideo->setType( OpenGraphProtocolWVideo: :extensic
+Svideo->setWidth( 500 );
+Svideo->setHeight( 400 );
+Saudio = new OpenGraphProtocolaudio( );
+Saudio->setURL( 'http://example.com/audio.mp3" );
+Saudio->setSecureURL( 'https://example.com/audio.
+Saudio->setType('audio/mpeg' );
+>
+Declare a new openéraphProtocot object and set some
+properties. Add structured media objects.
+<?php
+Sogp = new OpenGraphProtocol();
+Sogp->setLocale( ‘en_US’ );
+Sogp->setSiteName( ‘Happy place’ );
+Sogp->setTitle( ‘Hello world" );
+Sogp->setDescription( 'We make the world happy.'
+Sogp->setType( 'website' );
+Sogp->setURL( 'http://example.com/' );
+Sogp->setDeterminer( ‘the’ );
+Sogp->addImage(Simage) ;
+Sogp->addAudio(Saudio) ;
+Sogp->addVideo($video) ;
+>
+Output your OpenGraphProtocol object as HTML <meta>
+elements. Default configuration uses the property
+attribute from RDFa. Change to name if you prefer HTML
+specification compliance and consuming agents support
+the name attribute as a property fallback.
+<?php
+Sogp->toHTML();
+>
+Global objects
+Build global objects and attributes. Set time values using
+either an ISO 8601 formatted string or a DateTime object.
+DateTimes will be converted to the UTC timezone before
+output for consistency.
+<?php
+Sarticle = new OpenGraphProtocolarticle();
+Sarticle->setPublishedTime( '2011-11-03T01:23:452
+Sarticle->setModifiedTime( new DateTime( ‘now’, n
+Sarticle->setExpirationTime( '2011-12-31T23:59:59
+Sarticle->setSection( 'Front page’ );
+Sarticle->addTag( ‘weather’ );
+Sarticle->addTag( ‘football’ );
+Sarticle->addAuthor( 'http://example.com/author -h
+>
+Convert a global object to <meta> elements just as you
+would with openGraphProtocot.
+<?php
+Sarticle->toHTML();
+>
+¢ Combined
+Acommon use case might be storing Open Graph
+protocol objects in a Controller for use by your web
+application. You can add each object to an array and later
+iterate through the array for <head prefix=""> and
+<meta> outputs.
+<?php
+Sogp_objects = array( Sogp, Sarticle );
+Sprefix = '';
+Smeta = '';
+foreach ( Sogp_objects as Sogp_object ) {
+Sprefix .= Sogp_object::PREFIX . ': ' . Sogp_
+Smeta .= Sogp_object->toHTML() . PHP_EOL;
+r
+a
+<head prefix="<?php echo rtrim( Sprefix,' ' ); 2
+<2php echo rtrim( Smeta, PHP EOL ); ?>
+</nead>
+Terms Privacy Security Status Docs Contact GitHub Pricing API Training Blog About
+©) ©2022 cittiub, ine
+
+(=) (sinup) =
+@ niallkennedy/open-graph-protocol-tools Pubic
+Q Notitications = Fork 75 Wy Star 2440
+<> Code © Issues 2 T2 Pullrequests 2 © Actions fF Projects O wiki a
+P maser + cot fe About
+Open Graph Protocol validator
+@ niallkennedy update list of Fa... =» on 22May 2015 43
+@ ogp.mel
+( README.md consistent spacing il years ago] Readme
+( media.php tabs instead of spaces 10 years ago wy 244 stars
+1 objects.php  addWriter() changes to stayc... 10 yearsago | © 29 watching
+Y 75 forks
+1 open-grap... update list of Facebook locales, 7 years ago
+= README.md Releases
+No releases published
+¢ Open Graph protocol
+Packages
+No packages published
+Contributors 2
+@ niallkennedy Niall Kennedy
+oh erunion Jon Ursenbach
+Languages
+———————
+© PHP 100.0%
+Open Graph protocol enhances information associated
+with a webpage through key-value pairs included as
+<meta> elements in your HTML. This additional data is
+consumed by social sharing sites, populating a story
+preview for shared links and referenced objects in the
+social graph
+This project includes tools to validate and sanitize inputs
+before generating Open Graph protocol markup on your
+webpages. This project standardizes outputs for easy
+indexing by consuming agents.
+¢ Consuming agents
+@ Facebook
+Facebook indexes Open Graph protocol markup found on
+pages shared in a member's social news feed. This
+markup also enhances social news feed stories generated
+by the Like button social plugin and Facebook Share.
+Open Graph protocol markup turns webpages into objects
+within the Facebook social graph, increasing search
+exposure and uniquely classifying your site and story type
+within the social news feed.
+The Facebook Object Debugger displays a Facebook
+interpretation of your site's Open Graph protocol content.
+2 mixi Check
+Mixi indexes Open Graph protocol markup in its mixi
+Check social sharing service.
+2 Google+ Snippet
+Google indexes Open Graph protocol markup to populate
+a Google+ activity post.
+? Sample code
+@ Core Open Graph protocol
+Support for structured properties for image, video, and
+audio objects.
+<?php
+Simage = new OpenGraphProtocoltmage( );
+Simage->setURL( 'http://example.com/image.jpg' );
+Simage->setSecureURL( 'https://example.com/image.
+Simage->setType( image/jpeg" );
+Simage->setWidth( 400 );
+Simage->setHeight( 200 );
+Svideo = new OpenGraphProtocolVideo( );
+Svideo->setURL( 'http://example.com/video. swt" );
+Svideo->setSecureURL( 'https://example.com/video.
+Svideo->setType( OpenGraphProtocolWVideo: :extensic
+Svideo->setWidth( 500 );
+Svideo->setHeight( 400 );
+Saudio = new OpenGraphProtocolaudio( );
+Saudio->setURL( 'http://example.com/audio.mp3" );
+Saudio->setSecureURL( 'https://example.com/audio.
+Saudio->setType('audio/mpeg' );
+>
+Declare a new openéraphProtocot object and set some
+properties. Add structured media objects.
+<?php
+Sogp = new OpenGraphProtocol();
+Sogp->setLocale( ‘en_US’ );
+Sogp->setSiteName( ‘Happy place’ );
+Sogp->setTitle( ‘Hello world" );
+Sogp->setDescription( 'We make the world happy.'
+Sogp->setType( 'website' );
+Sogp->setURL( 'http://example.com/' );
+Sogp->setDeterminer( ‘the’ );
+Sogp->addImage(Simage) ;
+Sogp->addAudio(Saudio) ;
+Sogp->addVideo($video) ;
+>
+Output your OpenGraphProtocol object as HTML <meta>
+elements. Default configuration uses the property
+attribute from RDFa. Change to name if you prefer HTML
+specification compliance and consuming agents support
+the name attribute as a property fallback.
+<?php
+Sogp->toHTML();
+>
+Global objects
+Build global objects and attributes. Set time values using
+either an ISO 8601 formatted string or a DateTime object.
+DateTimes will be converted to the UTC timezone before
+output for consistency.
+<?php
+Sarticle = new OpenGraphProtocolarticle();
+Sarticle->setPublishedTime( '2011-11-03T01:23:452
+Sarticle->setModifiedTime( new DateTime( ‘now’, n
+Sarticle->setExpirationTime( '2011-12-31T23:59:59
+Sarticle->setSection( 'Front page’ );
+Sarticle->addTag( ‘weather’ );
+Sarticle->addTag( ‘football’ );
+Sarticle->addAuthor( 'http://example.com/author -h
+>
+Convert a global object to <meta> elements just as you
+would with openGraphProtocot.
+<?php
+Sarticle->toHTML();
+>
+¢ Combined
+Acommon use case might be storing Open Graph
+protocol objects in a Controller for use by your web
+application. You can add each object to an array and later
+iterate through the array for <head prefix=""> and
+<meta> outputs.
+<?php
+Sogp_objects = array( Sogp, Sarticle );
+Sprefix = '';
+Smeta = '';
+foreach ( Sogp_objects as Sogp_object ) {
+Sprefix .= Sogp_object::PREFIX . ': ' . Sogp_
+Smeta .= Sogp_object->toHTML() . PHP_EOL;
+r
+a
+<head prefix="<?php echo rtrim( Sprefix,' ' ); 2
+<2php echo rtrim( Smeta, PHP EOL ); ?>
+</nead>
+Terms Privacy Security Status Docs Contact GitHub Pricing API Training Blog About
+©) ©2022 cittiub, ine

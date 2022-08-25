@@ -10,7 +10,7 @@ const web3 = new Web3(provider);
 var alpha = require('./web3-storage-quickstart/put-files.cjs');
 alpha.cid=[];
 function pushing(){
-    console.log('Uploading Perceptual Hash on IPFS');
+    console.log('Uploading JSON on IPFS');
     if (alpha.cid.length<1) {
         setTimeout(() => {
             pushing();
@@ -18,9 +18,9 @@ function pushing(){
     }
     else sendFunc();
 }
-
+pushing()
 var ethereumAddr = '0xDbf80420Ae83B419E1B2Fc6cAd84A6534129A155';
-var nameOfTheMedia = 'test1';
+var nameOfTheMedia = 'Dear Zindagi';
 
 // const deploy = async () => {
 //     const accounts = await web3.eth.getAccounts();
@@ -42,9 +42,9 @@ const sendFunc = async() => {
     const enigmaUpload = await new web3.eth.Contract(JSON.parse(interface), ethereumAddr);
     const sender = await enigmaUpload.methods.giveNameAndCid(nameOfTheMedia, alpha.cid).send({ from: accounts[0] });
     sender;
-    console.log('Uploaded on ethereum Address:', enigmaUpload.options.address, '\nYour Character Identifier on IPFS is:', alpha.cid,'\nwith the name: ');
+    console.log('Uploaded on ethereum Address:', enigmaUpload.options.address, '\nYour Character Identifier on IPFS is:', alpha.cid,'\nwith the name: ', nameOfTheMedia);
     provider.engine.stop();
-    readFunc();
+    //readFunc();
 }
 
 const readFunc = async() =>{
@@ -56,5 +56,5 @@ const readFunc = async() =>{
     console.log('Your Character Identifier on IPFS is:', reader);
     provider.engine.stop();
 }
-readFunc();
+//readFunc();
 //pushing();

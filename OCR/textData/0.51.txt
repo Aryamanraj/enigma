@@ -1,0 +1,1091 @@
+5 next] [table of contents]
+s Yo
+EWC
+8 oj
+E
+8
+fe
+aXHTML™ Modularization 1.1 - Second Edition
+3
+3
+Fa\WV3C Recommendation 29 July 2010
+Fasuperseded 27 March 2018
+om
+fa This version:
+Bi http://www.w3.org/TR/2018/SPSD-xhtmI-modularization-20180327/
+Latest version:
+http/www.w3.org/TR/xhtmI-modularization
+Previous version:
+httpvAwww.w3.org/TR/2010/REC-xhtml-modularization-20100729
+Diff-marked version:
+xhtm|-modularization-diff, htm!
+Editor:
+Shane McCarron, Applied Testing and Technology, Inc. shane@aptest.com
+Version 1.1 Editors:
+Daniel Austin, Sun Microsystems
+Subramanian Peruvemba, Oracle Corporation
+Shane McCarron, Applied Testing and Technology, Inc. shane@aptest.com
+Masayasu Ishikawa, W3C
+Mark Birbeck, webBackplane mark.birbeck@webBackplane.com
+Version 1.0 Editors:
+Murray Altheim, Sun Microsystems
+Frank Boumphrey, HTML Writers Guild
+Sam Dooley, IBM
+Shane McCarron, Applied Testing and Technology
+Sebastian Schnitzenbaumer, Mozquito Technologies AG
+‘Ted Wugofski, Openwave (formerly Gateway)
+Please refer to the errata for this document, which may include some normative corrections.
+This document is also available in these non-normative formats: Single HTML file, PostScript version, PDE
+version, ZIP archive, or Gzip'd TAR archive.
+See also translations.
+Copyright © 2007-2010 W3C® (MIT, ERCIM, Keio), All Rights Reserved. W3C liability, trademark and document use rules apply.
+Abstract
+This document is the second edition of version 1.1 of XHTML Modularization, an abstract modularization of
+XHTML and implementations of the abstraction using XML Document Type Definitions (DTDs) and XML
+Schemas. This modularization provides a means for subsetting and extending XHTML, a feature needed
+for extending XHTML's reach onto emerging platforms. This specification is intended for use by language
+designers as they construct new XHTML Family Markup Languages. This specification does not define the
+semantics of elements and attributes, only how those elements and attributes are assembled into modules,
+and from those modules into markup languages. This update includes several minor updates to provide
+clarifications and address errors found in version 1.1.
+Status of This Document
+This section describes the status of this document at the time of its publication. Other documents may
+supersede this document. A list of current W3C publications and the latest revision of this technical report
+can be found in the W3C technical reports index at https://www.w3.org/TRY.
+This specification is a Superseded Recommendation. A newer specification exists that is recommended for
+new adoption in place of this specification.
+This document also supersedes the previous edition of XHTML Modulatization 1.1.
+This document has been reviewed by W3C Members, by software developers, and by other W3C groups
+and interested parties, and is endorsed by the Director as a W3C Recommendation.
+This document has been produced by the W3C XHTML 2 Working Group as part of the HTML Activity.
+For purposes of the W3C Patent Policy, this Superseded Recommendation has the same status as an
+active Recommendation; it retains licensing commitments and remains available as a reference for old —
+and possibly still deployed -- implementations, but is not recommended for future implementation. New
+implementations should follow the latest version of the HTML specification
+Quick Table of Contents
+1. Introduction
+2. Terms and Definitions
+3. Conformance Definition
+4, Defining Abstract Modules
+5. XHTML Abstract Modules
+A. Building Schema Modules
+B. Developing Schema with defined and extended modules
+C. XHTML Schema Module Implementations
+D. Building DTD Modules
+E. Developing DTDs with defined and extended modules
+F. XHTML DTD Module Implementations
+G. References
+H. Design Goals
+J. Acknowledgements
+|. Changes from XHTML Modularization 1.0
+Full Table of Contents
+1. Introduction
+1.1. What is XHTML?
+1.2. What is XHTML Modularization?
+1.3. Why Modularize XHTML?
+1.3.1. Abstract modules
+1.3.2. Module implementations
+1.3.3. Hybrid document types
+1.3.4. Validation
+1.3.5. Formatting Model
+2. Terms and Definitions
+3. Conformance Definition
+3.1. XHTML Host Language Document Type Conformance
+3.2. XHTML Integration Set Document Type Conformance
+3.3. XHTML Family Module Conformance
+3.4. XHTML Family Document Conformance
+3.5. XHTML Family User Agent Conformance
+3.6. Naming Rules
+3.7. XHTML Module Evolution
+4. Defining Abstract Modules
+4.1. Syntactic Conventions
+4.2. Content Types
+4.3. Attribute Types
+4.4. An Example Abstract Module Definition
+4.4.1, XHTML Skiing Module
+5. XHTML Abstract Modules
+5.1. Attribute Collections
+5.2. Core Modules
+5.2.1. Structure Module
+5.2.2. Text Module
+5.2.3. Hypertext Module
+5.2.4, List Module
+5.3. Applet Module
+5.4. Text Extension Modules
+5.4.1. Presentation Module
+5.4.2. Edit Module
+5.4.3. Bi-directional Text Module
+5.5. Forms Modules
+55.1. Basic Forms Module
+5.5.2. Forms Module
+5.6. Table Modules
+5.6.1. Basic Tables Module
+5.6.2. Tables Module
+5.7. Image Module
+5,8. Client-side Image Map Module
+5.9. Server-side Image Map Module
+5.10. Object Module
+5.11. Frames Module
+5.12. Target Module
+5.13. iframe Module
+5.14. Intrinsic Events Module
+5.15. Metainformation Module
+5.16. Scripting Module
+5.17. Style Sheet Module
+5.18. Style Attribute Module
+5.19. Link Module
+5.20. Base Module
+5.21. Name Identification Module
+5.22. Legacy Module
+A. Building Schema Modules
+A.1. Named Content Models
+2. Defining the Namespace of a Module
+‘2.1. Global and Local Element Declarations
+2.2. Global and Local Attribute Declarations
+A.3. Importing External Namespace Schema Components
+AA. Datatype Definitions and Namespaces
+AS. Content Model Redefinitions
+B. Developing Schema with defined and extended modules
+B.1. Defining additional attributes
+B.2. Defining additional elements
+B.3. Defining the content model for a collection of modules
+B.3.1. Integrating a stand-alone module into XHTML
+B.3.2. Mixing a new module throughout the modules in XHTML
+B.4. Creating a new Document Type
+B.4.1. Creating a simple Document Type
+B.4.2. Creating a Language by extending XHTML
+B.4.3. Creating a Language by removing and replacing XHTML modules
+B.4.4. Creating a the new Document Type
+C. XHTML Schema Module Implementations
+C.1. Character Entities
+C.2. XHTML Schema Modular Framework
+C.2.1. XHTML Notations
+C.2.2. XHTML Datatypes
+C.2.3. XHTML Common Attribute Definitions
+C.2.4. XHTML Character Entities
+C.3. XHTML Module Implementations
+€.3.1. XHTML Core Modules
+C.3.2. Applet
+C.3.3. Text Modules
+C.3.4. Forms
+C.35. Tables
+C.3.6. Image
+C.3.7. Client-side Image Map
+C.3.8. Server-side Image Map
+C.3.9. Object
+C.3.10. Frames
+C.3.11. Target
+C.3.12. frame
+€.3.13. Intrinsic Events
+C.3.14. Metainformation
+C.3.15. Scripting
+C.3.16. Style Sheet
+C.3.17. Style Attribute
+C.3.18. Link
+C.3.19. Base
+C.3.20. Name Identification
+C.3.21. Legacy
+C.3.22. Ruby
+C.4. XHTML Schema Support Modules
+C.4.1. Block Phrasal
+C.4.2. Block Presentational
+C.4.3. Block Structural
+C.4.4. Inline Phrasal
+C.45. Inline Presentational
+C.4.6. Inline Structural
+C.4.7. Param
+C.4.8. Legacy - Miscellaneous
+D. Building DTD Modules
+D.1. Parameter Entity Naming
+D.2. Defining the Namespace of a Module
+D.2.1. Qualified Names sub-module
+D.2.2. Declaration sub-module(s)
+D.2.3. Using the module as a stand-alone DTD
+D.2.4. Namespace Idiosyncrasies
+E. Developing DTDs with defined and extended modules
+E.1. Defining additional attributes
+E.2. Defining additional elements
+E.3. Defining the content model for a collection of modules
+E.3.1. Integrating a stand-alone module into XHTML
+E.3.2. Mixing a new module throughout the modules in XHTML
+E.4. Creating. a new DTD
+E.4.1. Creating a simple DTD
+E.4.2. Creating a DTD by extending XHTML
+E.4.3. Creating a DTD by removing and replacing XHTML modules
+E.4.4. Creating a new DTD
+E.5. Using the new DTD
+F. XHTML DTD Module Implementations
+F.1. XHTML Character Entities
+F.1.1. XHTML Latin 1 Character Entities
+F.1.2. XHTML Special Characters
+F.1.3. XHTML Mathematical, Greek, and Symbolic Characters
+F.2. XHTML Modular Framework
+F.2.1. XHTML Base Architecture
+F.2.2. XHTML Notations
+F.2.3. XHTML Datatypes
+F.2.4. XHTML Common Attribute Definitions
+F.2.5. XHTML Qualified Names
+F.2.6. XHTML Character Entities
+F3. XHTML Module Implementations
+F.3.1. XHTML Core Modules
+F.3.2. Applet
+F.3.3. Text Modules
+F3.4. Forms
+F.3.5. Tables
+F3.6. Image
+F.3.7. Client-side Image Map
+F.3.8. Server-side Image Map
+F.3.9. Object
+F.3.10. Frames
+F3.11. Target
+F.3.12. frame
+F.3.13. Intrinsic Events
+F.3.14. Metainformation
+F.3.15. Scripting
+F.3.16. Style Sheet
+F3.17. Style Attribute
+F.3.18. Link
+F319. Base
+F.3.20. Name Identification
+F.3.21. Legacy
+F.4. XHTML DTD Support Modules
+F.4.1. Block Phrasal
+F.4.2. Block Presentational
+F.4.3. Block Structural
+F.4.4. Inline Phrasal
+F.4.5. Inline Presentational
+F.4.6. Inline Structural
+F4.7. Param
+F.4.8. Legacy Redeclarations
+G. References
+G.1. Normative References
+G.2. Informative References
+H. Design Goals
+H.1. Requirements
+H.1.1. Granularity
+H.1.2. Composibility
+H.1.3. Ease of Use
+H.1.4. Compatibility
+H.1.5. Conformance
+J. Acknowledgements
+1. Changes from XHTML Modularization 1.0
+next] [table of contents]
+
+5 next] [table of contents]
+s Yo
+EWC
+8 oj
+E
+8
+fe
+aXHTML™ Modularization 1.1 - Second Edition
+3
+3
+Fa\WV3C Recommendation 29 July 2010
+Fasuperseded 27 March 2018
+om
+fa This version:
+Bi http://www.w3.org/TR/2018/SPSD-xhtmI-modularization-20180327/
+Latest version:
+http/www.w3.org/TR/xhtmI-modularization
+Previous version:
+httpvAwww.w3.org/TR/2010/REC-xhtml-modularization-20100729
+Diff-marked version:
+xhtm|-modularization-diff, htm!
+Editor:
+Shane McCarron, Applied Testing and Technology, Inc. shane@aptest.com
+Version 1.1 Editors:
+Daniel Austin, Sun Microsystems
+Subramanian Peruvemba, Oracle Corporation
+Shane McCarron, Applied Testing and Technology, Inc. shane@aptest.com
+Masayasu Ishikawa, W3C
+Mark Birbeck, webBackplane mark.birbeck@webBackplane.com
+Version 1.0 Editors:
+Murray Altheim, Sun Microsystems
+Frank Boumphrey, HTML Writers Guild
+Sam Dooley, IBM
+Shane McCarron, Applied Testing and Technology
+Sebastian Schnitzenbaumer, Mozquito Technologies AG
+‘Ted Wugofski, Openwave (formerly Gateway)
+Please refer to the errata for this document, which may include some normative corrections.
+This document is also available in these non-normative formats: Single HTML file, PostScript version, PDE
+version, ZIP archive, or Gzip'd TAR archive.
+See also translations.
+Copyright © 2007-2010 W3C® (MIT, ERCIM, Keio), All Rights Reserved. W3C liability, trademark and document use rules apply.
+Abstract
+This document is the second edition of version 1.1 of XHTML Modularization, an abstract modularization of
+XHTML and implementations of the abstraction using XML Document Type Definitions (DTDs) and XML
+Schemas. This modularization provides a means for subsetting and extending XHTML, a feature needed
+for extending XHTML's reach onto emerging platforms. This specification is intended for use by language
+designers as they construct new XHTML Family Markup Languages. This specification does not define the
+semantics of elements and attributes, only how those elements and attributes are assembled into modules,
+and from those modules into markup languages. This update includes several minor updates to provide
+clarifications and address errors found in version 1.1.
+Status of This Document
+This section describes the status of this document at the time of its publication. Other documents may
+supersede this document. A list of current W3C publications and the latest revision of this technical report
+can be found in the W3C technical reports index at https://www.w3.org/TRY.
+This specification is a Superseded Recommendation. A newer specification exists that is recommended for
+new adoption in place of this specification.
+This document also supersedes the previous edition of XHTML Modulatization 1.1.
+This document has been reviewed by W3C Members, by software developers, and by other W3C groups
+and interested parties, and is endorsed by the Director as a W3C Recommendation.
+This document has been produced by the W3C XHTML 2 Working Group as part of the HTML Activity.
+For purposes of the W3C Patent Policy, this Superseded Recommendation has the same status as an
+active Recommendation; it retains licensing commitments and remains available as a reference for old —
+and possibly still deployed -- implementations, but is not recommended for future implementation. New
+implementations should follow the latest version of the HTML specification
+Quick Table of Contents
+1. Introduction
+2. Terms and Definitions
+3. Conformance Definition
+4, Defining Abstract Modules
+5. XHTML Abstract Modules
+A. Building Schema Modules
+B. Developing Schema with defined and extended modules
+C. XHTML Schema Module Implementations
+D. Building DTD Modules
+E. Developing DTDs with defined and extended modules
+F. XHTML DTD Module Implementations
+G. References
+H. Design Goals
+J. Acknowledgements
+|. Changes from XHTML Modularization 1.0
+Full Table of Contents
+1. Introduction
+1.1. What is XHTML?
+1.2. What is XHTML Modularization?
+1.3. Why Modularize XHTML?
+1.3.1. Abstract modules
+1.3.2. Module implementations
+1.3.3. Hybrid document types
+1.3.4. Validation
+1.3.5. Formatting Model
+2. Terms and Definitions
+3. Conformance Definition
+3.1. XHTML Host Language Document Type Conformance
+3.2. XHTML Integration Set Document Type Conformance
+3.3. XHTML Family Module Conformance
+3.4. XHTML Family Document Conformance
+3.5. XHTML Family User Agent Conformance
+3.6. Naming Rules
+3.7. XHTML Module Evolution
+4. Defining Abstract Modules
+4.1. Syntactic Conventions
+4.2. Content Types
+4.3. Attribute Types
+4.4. An Example Abstract Module Definition
+4.4.1, XHTML Skiing Module
+5. XHTML Abstract Modules
+5.1. Attribute Collections
+5.2. Core Modules
+5.2.1. Structure Module
+5.2.2. Text Module
+5.2.3. Hypertext Module
+5.2.4, List Module
+5.3. Applet Module
+5.4. Text Extension Modules
+5.4.1. Presentation Module
+5.4.2. Edit Module
+5.4.3. Bi-directional Text Module
+5.5. Forms Modules
+55.1. Basic Forms Module
+5.5.2. Forms Module
+5.6. Table Modules
+5.6.1. Basic Tables Module
+5.6.2. Tables Module
+5.7. Image Module
+5,8. Client-side Image Map Module
+5.9. Server-side Image Map Module
+5.10. Object Module
+5.11. Frames Module
+5.12. Target Module
+5.13. iframe Module
+5.14. Intrinsic Events Module
+5.15. Metainformation Module
+5.16. Scripting Module
+5.17. Style Sheet Module
+5.18. Style Attribute Module
+5.19. Link Module
+5.20. Base Module
+5.21. Name Identification Module
+5.22. Legacy Module
+A. Building Schema Modules
+A.1. Named Content Models
+2. Defining the Namespace of a Module
+‘2.1. Global and Local Element Declarations
+2.2. Global and Local Attribute Declarations
+A.3. Importing External Namespace Schema Components
+AA. Datatype Definitions and Namespaces
+AS. Content Model Redefinitions
+B. Developing Schema with defined and extended modules
+B.1. Defining additional attributes
+B.2. Defining additional elements
+B.3. Defining the content model for a collection of modules
+B.3.1. Integrating a stand-alone module into XHTML
+B.3.2. Mixing a new module throughout the modules in XHTML
+B.4. Creating a new Document Type
+B.4.1. Creating a simple Document Type
+B.4.2. Creating a Language by extending XHTML
+B.4.3. Creating a Language by removing and replacing XHTML modules
+B.4.4. Creating a the new Document Type
+C. XHTML Schema Module Implementations
+C.1. Character Entities
+C.2. XHTML Schema Modular Framework
+C.2.1. XHTML Notations
+C.2.2. XHTML Datatypes
+C.2.3. XHTML Common Attribute Definitions
+C.2.4. XHTML Character Entities
+C.3. XHTML Module Implementations
+€.3.1. XHTML Core Modules
+C.3.2. Applet
+C.3.3. Text Modules
+C.3.4. Forms
+C.35. Tables
+C.3.6. Image
+C.3.7. Client-side Image Map
+C.3.8. Server-side Image Map
+C.3.9. Object
+C.3.10. Frames
+C.3.11. Target
+C.3.12. frame
+€.3.13. Intrinsic Events
+C.3.14. Metainformation
+C.3.15. Scripting
+C.3.16. Style Sheet
+C.3.17. Style Attribute
+C.3.18. Link
+C.3.19. Base
+C.3.20. Name Identification
+C.3.21. Legacy
+C.3.22. Ruby
+C.4. XHTML Schema Support Modules
+C.4.1. Block Phrasal
+C.4.2. Block Presentational
+C.4.3. Block Structural
+C.4.4. Inline Phrasal
+C.45. Inline Presentational
+C.4.6. Inline Structural
+C.4.7. Param
+C.4.8. Legacy - Miscellaneous
+D. Building DTD Modules
+D.1. Parameter Entity Naming
+D.2. Defining the Namespace of a Module
+D.2.1. Qualified Names sub-module
+D.2.2. Declaration sub-module(s)
+D.2.3. Using the module as a stand-alone DTD
+D.2.4. Namespace Idiosyncrasies
+E. Developing DTDs with defined and extended modules
+E.1. Defining additional attributes
+E.2. Defining additional elements
+E.3. Defining the content model for a collection of modules
+E.3.1. Integrating a stand-alone module into XHTML
+E.3.2. Mixing a new module throughout the modules in XHTML
+E.4. Creating. a new DTD
+E.4.1. Creating a simple DTD
+E.4.2. Creating a DTD by extending XHTML
+E.4.3. Creating a DTD by removing and replacing XHTML modules
+E.4.4. Creating a new DTD
+E.5. Using the new DTD
+F. XHTML DTD Module Implementations
+F.1. XHTML Character Entities
+F.1.1. XHTML Latin 1 Character Entities
+F.1.2. XHTML Special Characters
+F.1.3. XHTML Mathematical, Greek, and Symbolic Characters
+F.2. XHTML Modular Framework
+F.2.1. XHTML Base Architecture
+F.2.2. XHTML Notations
+F.2.3. XHTML Datatypes
+F.2.4. XHTML Common Attribute Definitions
+F.2.5. XHTML Qualified Names
+F.2.6. XHTML Character Entities
+F3. XHTML Module Implementations
+F.3.1. XHTML Core Modules
+F.3.2. Applet
+F.3.3. Text Modules
+F3.4. Forms
+F.3.5. Tables
+F3.6. Image
+F.3.7. Client-side Image Map
+F.3.8. Server-side Image Map
+F.3.9. Object
+F.3.10. Frames
+F3.11. Target
+F.3.12. frame
+F.3.13. Intrinsic Events
+F.3.14. Metainformation
+F.3.15. Scripting
+F.3.16. Style Sheet
+F3.17. Style Attribute
+F.3.18. Link
+F319. Base
+F.3.20. Name Identification
+F.3.21. Legacy
+F.4. XHTML DTD Support Modules
+F.4.1. Block Phrasal
+F.4.2. Block Presentational
+F.4.3. Block Structural
+F.4.4. Inline Phrasal
+F.4.5. Inline Presentational
+F.4.6. Inline Structural
+F4.7. Param
+F.4.8. Legacy Redeclarations
+G. References
+G.1. Normative References
+G.2. Informative References
+H. Design Goals
+H.1. Requirements
+H.1.1. Granularity
+H.1.2. Composibility
+H.1.3. Ease of Use
+H.1.4. Compatibility
+H.1.5. Conformance
+J. Acknowledgements
+1. Changes from XHTML Modularization 1.0
+next] [table of contents]
+
+5 next] [table of contents]
+s Yo
+EWC
+8 oj
+E
+8
+fe
+aXHTML™ Modularization 1.1 - Second Edition
+3
+3
+Fa\WV3C Recommendation 29 July 2010
+Fasuperseded 27 March 2018
+om
+fa This version:
+Bi http://www.w3.org/TR/2018/SPSD-xhtmI-modularization-20180327/
+Latest version:
+http/www.w3.org/TR/xhtmI-modularization
+Previous version:
+httpvAwww.w3.org/TR/2010/REC-xhtml-modularization-20100729
+Diff-marked version:
+xhtm|-modularization-diff, htm!
+Editor:
+Shane McCarron, Applied Testing and Technology, Inc. shane@aptest.com
+Version 1.1 Editors:
+Daniel Austin, Sun Microsystems
+Subramanian Peruvemba, Oracle Corporation
+Shane McCarron, Applied Testing and Technology, Inc. shane@aptest.com
+Masayasu Ishikawa, W3C
+Mark Birbeck, webBackplane mark.birbeck@webBackplane.com
+Version 1.0 Editors:
+Murray Altheim, Sun Microsystems
+Frank Boumphrey, HTML Writers Guild
+Sam Dooley, IBM
+Shane McCarron, Applied Testing and Technology
+Sebastian Schnitzenbaumer, Mozquito Technologies AG
+‘Ted Wugofski, Openwave (formerly Gateway)
+Please refer to the errata for this document, which may include some normative corrections.
+This document is also available in these non-normative formats: Single HTML file, PostScript version, PDE
+version, ZIP archive, or Gzip'd TAR archive.
+See also translations.
+Copyright © 2007-2010 W3C® (MIT, ERCIM, Keio), All Rights Reserved. W3C liability, trademark and document use rules apply.
+Abstract
+This document is the second edition of version 1.1 of XHTML Modularization, an abstract modularization of
+XHTML and implementations of the abstraction using XML Document Type Definitions (DTDs) and XML
+Schemas. This modularization provides a means for subsetting and extending XHTML, a feature needed
+for extending XHTML's reach onto emerging platforms. This specification is intended for use by language
+designers as they construct new XHTML Family Markup Languages. This specification does not define the
+semantics of elements and attributes, only how those elements and attributes are assembled into modules,
+and from those modules into markup languages. This update includes several minor updates to provide
+clarifications and address errors found in version 1.1.
+Status of This Document
+This section describes the status of this document at the time of its publication. Other documents may
+supersede this document. A list of current W3C publications and the latest revision of this technical report
+can be found in the W3C technical reports index at https://www.w3.org/TRY.
+This specification is a Superseded Recommendation. A newer specification exists that is recommended for
+new adoption in place of this specification.
+This document also supersedes the previous edition of XHTML Modulatization 1.1.
+This document has been reviewed by W3C Members, by software developers, and by other W3C groups
+and interested parties, and is endorsed by the Director as a W3C Recommendation.
+This document has been produced by the W3C XHTML 2 Working Group as part of the HTML Activity.
+For purposes of the W3C Patent Policy, this Superseded Recommendation has the same status as an
+active Recommendation; it retains licensing commitments and remains available as a reference for old —
+and possibly still deployed -- implementations, but is not recommended for future implementation. New
+implementations should follow the latest version of the HTML specification
+Quick Table of Contents
+1. Introduction
+2. Terms and Definitions
+3. Conformance Definition
+4, Defining Abstract Modules
+5. XHTML Abstract Modules
+A. Building Schema Modules
+B. Developing Schema with defined and extended modules
+C. XHTML Schema Module Implementations
+D. Building DTD Modules
+E. Developing DTDs with defined and extended modules
+F. XHTML DTD Module Implementations
+G. References
+H. Design Goals
+J. Acknowledgements
+|. Changes from XHTML Modularization 1.0
+Full Table of Contents
+1. Introduction
+1.1. What is XHTML?
+1.2. What is XHTML Modularization?
+1.3. Why Modularize XHTML?
+1.3.1. Abstract modules
+1.3.2. Module implementations
+1.3.3. Hybrid document types
+1.3.4. Validation
+1.3.5. Formatting Model
+2. Terms and Definitions
+3. Conformance Definition
+3.1. XHTML Host Language Document Type Conformance
+3.2. XHTML Integration Set Document Type Conformance
+3.3. XHTML Family Module Conformance
+3.4. XHTML Family Document Conformance
+3.5. XHTML Family User Agent Conformance
+3.6. Naming Rules
+3.7. XHTML Module Evolution
+4. Defining Abstract Modules
+4.1. Syntactic Conventions
+4.2. Content Types
+4.3. Attribute Types
+4.4. An Example Abstract Module Definition
+4.4.1, XHTML Skiing Module
+5. XHTML Abstract Modules
+5.1. Attribute Collections
+5.2. Core Modules
+5.2.1. Structure Module
+5.2.2. Text Module
+5.2.3. Hypertext Module
+5.2.4, List Module
+5.3. Applet Module
+5.4. Text Extension Modules
+5.4.1. Presentation Module
+5.4.2. Edit Module
+5.4.3. Bi-directional Text Module
+5.5. Forms Modules
+55.1. Basic Forms Module
+5.5.2. Forms Module
+5.6. Table Modules
+5.6.1. Basic Tables Module
+5.6.2. Tables Module
+5.7. Image Module
+5,8. Client-side Image Map Module
+5.9. Server-side Image Map Module
+5.10. Object Module
+5.11. Frames Module
+5.12. Target Module
+5.13. iframe Module
+5.14. Intrinsic Events Module
+5.15. Metainformation Module
+5.16. Scripting Module
+5.17. Style Sheet Module
+5.18. Style Attribute Module
+5.19. Link Module
+5.20. Base Module
+5.21. Name Identification Module
+5.22. Legacy Module
+A. Building Schema Modules
+A.1. Named Content Models
+2. Defining the Namespace of a Module
+‘2.1. Global and Local Element Declarations
+2.2. Global and Local Attribute Declarations
+A.3. Importing External Namespace Schema Components
+AA. Datatype Definitions and Namespaces
+AS. Content Model Redefinitions
+B. Developing Schema with defined and extended modules
+B.1. Defining additional attributes
+B.2. Defining additional elements
+B.3. Defining the content model for a collection of modules
+B.3.1. Integrating a stand-alone module into XHTML
+B.3.2. Mixing a new module throughout the modules in XHTML
+B.4. Creating a new Document Type
+B.4.1. Creating a simple Document Type
+B.4.2. Creating a Language by extending XHTML
+B.4.3. Creating a Language by removing and replacing XHTML modules
+B.4.4. Creating a the new Document Type
+C. XHTML Schema Module Implementations
+C.1. Character Entities
+C.2. XHTML Schema Modular Framework
+C.2.1. XHTML Notations
+C.2.2. XHTML Datatypes
+C.2.3. XHTML Common Attribute Definitions
+C.2.4. XHTML Character Entities
+C.3. XHTML Module Implementations
+€.3.1. XHTML Core Modules
+C.3.2. Applet
+C.3.3. Text Modules
+C.3.4. Forms
+C.35. Tables
+C.3.6. Image
+C.3.7. Client-side Image Map
+C.3.8. Server-side Image Map
+C.3.9. Object
+C.3.10. Frames
+C.3.11. Target
+C.3.12. frame
+€.3.13. Intrinsic Events
+C.3.14. Metainformation
+C.3.15. Scripting
+C.3.16. Style Sheet
+C.3.17. Style Attribute
+C.3.18. Link
+C.3.19. Base
+C.3.20. Name Identification
+C.3.21. Legacy
+C.3.22. Ruby
+C.4. XHTML Schema Support Modules
+C.4.1. Block Phrasal
+C.4.2. Block Presentational
+C.4.3. Block Structural
+C.4.4. Inline Phrasal
+C.45. Inline Presentational
+C.4.6. Inline Structural
+C.4.7. Param
+C.4.8. Legacy - Miscellaneous
+D. Building DTD Modules
+D.1. Parameter Entity Naming
+D.2. Defining the Namespace of a Module
+D.2.1. Qualified Names sub-module
+D.2.2. Declaration sub-module(s)
+D.2.3. Using the module as a stand-alone DTD
+D.2.4. Namespace Idiosyncrasies
+E. Developing DTDs with defined and extended modules
+E.1. Defining additional attributes
+E.2. Defining additional elements
+E.3. Defining the content model for a collection of modules
+E.3.1. Integrating a stand-alone module into XHTML
+E.3.2. Mixing a new module throughout the modules in XHTML
+E.4. Creating. a new DTD
+E.4.1. Creating a simple DTD
+E.4.2. Creating a DTD by extending XHTML
+E.4.3. Creating a DTD by removing and replacing XHTML modules
+E.4.4. Creating a new DTD
+E.5. Using the new DTD
+F. XHTML DTD Module Implementations
+F.1. XHTML Character Entities
+F.1.1. XHTML Latin 1 Character Entities
+F.1.2. XHTML Special Characters
+F.1.3. XHTML Mathematical, Greek, and Symbolic Characters
+F.2. XHTML Modular Framework
+F.2.1. XHTML Base Architecture
+F.2.2. XHTML Notations
+F.2.3. XHTML Datatypes
+F.2.4. XHTML Common Attribute Definitions
+F.2.5. XHTML Qualified Names
+F.2.6. XHTML Character Entities
+F3. XHTML Module Implementations
+F.3.1. XHTML Core Modules
+F.3.2. Applet
+F.3.3. Text Modules
+F3.4. Forms
+F.3.5. Tables
+F3.6. Image
+F.3.7. Client-side Image Map
+F.3.8. Server-side Image Map
+F.3.9. Object
+F.3.10. Frames
+F3.11. Target
+F.3.12. frame
+F.3.13. Intrinsic Events
+F.3.14. Metainformation
+F.3.15. Scripting
+F.3.16. Style Sheet
+F3.17. Style Attribute
+F.3.18. Link
+F319. Base
+F.3.20. Name Identification
+F.3.21. Legacy
+F.4. XHTML DTD Support Modules
+F.4.1. Block Phrasal
+F.4.2. Block Presentational
+F.4.3. Block Structural
+F.4.4. Inline Phrasal
+F.4.5. Inline Presentational
+F.4.6. Inline Structural
+F4.7. Param
+F.4.8. Legacy Redeclarations
+G. References
+G.1. Normative References
+G.2. Informative References
+H. Design Goals
+H.1. Requirements
+H.1.1. Granularity
+H.1.2. Composibility
+H.1.3. Ease of Use
+H.1.4. Compatibility
+H.1.5. Conformance
+J. Acknowledgements
+1. Changes from XHTML Modularization 1.0
+next] [table of contents]
+
+5 next] [table of contents]
+s Yo
+EWC
+8 oj
+E
+8
+fe
+aXHTML™ Modularization 1.1 - Second Edition
+3
+3
+Fa\WV3C Recommendation 29 July 2010
+Fasuperseded 27 March 2018
+om
+fa This version:
+Bi http://www.w3.org/TR/2018/SPSD-xhtmI-modularization-20180327/
+Latest version:
+http/www.w3.org/TR/xhtmI-modularization
+Previous version:
+httpvAwww.w3.org/TR/2010/REC-xhtml-modularization-20100729
+Diff-marked version:
+xhtm|-modularization-diff, htm!
+Editor:
+Shane McCarron, Applied Testing and Technology, Inc. shane@aptest.com
+Version 1.1 Editors:
+Daniel Austin, Sun Microsystems
+Subramanian Peruvemba, Oracle Corporation
+Shane McCarron, Applied Testing and Technology, Inc. shane@aptest.com
+Masayasu Ishikawa, W3C
+Mark Birbeck, webBackplane mark.birbeck@webBackplane.com
+Version 1.0 Editors:
+Murray Altheim, Sun Microsystems
+Frank Boumphrey, HTML Writers Guild
+Sam Dooley, IBM
+Shane McCarron, Applied Testing and Technology
+Sebastian Schnitzenbaumer, Mozquito Technologies AG
+‘Ted Wugofski, Openwave (formerly Gateway)
+Please refer to the errata for this document, which may include some normative corrections.
+This document is also available in these non-normative formats: Single HTML file, PostScript version, PDE
+version, ZIP archive, or Gzip'd TAR archive.
+See also translations.
+Copyright © 2007-2010 W3C® (MIT, ERCIM, Keio), All Rights Reserved. W3C liability, trademark and document use rules apply.
+Abstract
+This document is the second edition of version 1.1 of XHTML Modularization, an abstract modularization of
+XHTML and implementations of the abstraction using XML Document Type Definitions (DTDs) and XML
+Schemas. This modularization provides a means for subsetting and extending XHTML, a feature needed
+for extending XHTML's reach onto emerging platforms. This specification is intended for use by language
+designers as they construct new XHTML Family Markup Languages. This specification does not define the
+semantics of elements and attributes, only how those elements and attributes are assembled into modules,
+and from those modules into markup languages. This update includes several minor updates to provide
+clarifications and address errors found in version 1.1.
+Status of This Document
+This section describes the status of this document at the time of its publication. Other documents may
+supersede this document. A list of current W3C publications and the latest revision of this technical report
+can be found in the W3C technical reports index at https://www.w3.org/TRY.
+This specification is a Superseded Recommendation. A newer specification exists that is recommended for
+new adoption in place of this specification.
+This document also supersedes the previous edition of XHTML Modulatization 1.1.
+This document has been reviewed by W3C Members, by software developers, and by other W3C groups
+and interested parties, and is endorsed by the Director as a W3C Recommendation.
+This document has been produced by the W3C XHTML 2 Working Group as part of the HTML Activity.
+For purposes of the W3C Patent Policy, this Superseded Recommendation has the same status as an
+active Recommendation; it retains licensing commitments and remains available as a reference for old —
+and possibly still deployed -- implementations, but is not recommended for future implementation. New
+implementations should follow the latest version of the HTML specification
+Quick Table of Contents
+1. Introduction
+2. Terms and Definitions
+3. Conformance Definition
+4, Defining Abstract Modules
+5. XHTML Abstract Modules
+A. Building Schema Modules
+B. Developing Schema with defined and extended modules
+C. XHTML Schema Module Implementations
+D. Building DTD Modules
+E. Developing DTDs with defined and extended modules
+F. XHTML DTD Module Implementations
+G. References
+H. Design Goals
+J. Acknowledgements
+|. Changes from XHTML Modularization 1.0
+Full Table of Contents
+1. Introduction
+1.1. What is XHTML?
+1.2. What is XHTML Modularization?
+1.3. Why Modularize XHTML?
+1.3.1. Abstract modules
+1.3.2. Module implementations
+1.3.3. Hybrid document types
+1.3.4. Validation
+1.3.5. Formatting Model
+2. Terms and Definitions
+3. Conformance Definition
+3.1. XHTML Host Language Document Type Conformance
+3.2. XHTML Integration Set Document Type Conformance
+3.3. XHTML Family Module Conformance
+3.4. XHTML Family Document Conformance
+3.5. XHTML Family User Agent Conformance
+3.6. Naming Rules
+3.7. XHTML Module Evolution
+4. Defining Abstract Modules
+4.1. Syntactic Conventions
+4.2. Content Types
+4.3. Attribute Types
+4.4. An Example Abstract Module Definition
+4.4.1, XHTML Skiing Module
+5. XHTML Abstract Modules
+5.1. Attribute Collections
+5.2. Core Modules
+5.2.1. Structure Module
+5.2.2. Text Module
+5.2.3. Hypertext Module
+5.2.4, List Module
+5.3. Applet Module
+5.4. Text Extension Modules
+5.4.1. Presentation Module
+5.4.2. Edit Module
+5.4.3. Bi-directional Text Module
+5.5. Forms Modules
+55.1. Basic Forms Module
+5.5.2. Forms Module
+5.6. Table Modules
+5.6.1. Basic Tables Module
+5.6.2. Tables Module
+5.7. Image Module
+5,8. Client-side Image Map Module
+5.9. Server-side Image Map Module
+5.10. Object Module
+5.11. Frames Module
+5.12. Target Module
+5.13. iframe Module
+5.14. Intrinsic Events Module
+5.15. Metainformation Module
+5.16. Scripting Module
+5.17. Style Sheet Module
+5.18. Style Attribute Module
+5.19. Link Module
+5.20. Base Module
+5.21. Name Identification Module
+5.22. Legacy Module
+A. Building Schema Modules
+A.1. Named Content Models
+2. Defining the Namespace of a Module
+‘2.1. Global and Local Element Declarations
+2.2. Global and Local Attribute Declarations
+A.3. Importing External Namespace Schema Components
+AA. Datatype Definitions and Namespaces
+AS. Content Model Redefinitions
+B. Developing Schema with defined and extended modules
+B.1. Defining additional attributes
+B.2. Defining additional elements
+B.3. Defining the content model for a collection of modules
+B.3.1. Integrating a stand-alone module into XHTML
+B.3.2. Mixing a new module throughout the modules in XHTML
+B.4. Creating a new Document Type
+B.4.1. Creating a simple Document Type
+B.4.2. Creating a Language by extending XHTML
+B.4.3. Creating a Language by removing and replacing XHTML modules
+B.4.4. Creating a the new Document Type
+C. XHTML Schema Module Implementations
+C.1. Character Entities
+C.2. XHTML Schema Modular Framework
+C.2.1. XHTML Notations
+C.2.2. XHTML Datatypes
+C.2.3. XHTML Common Attribute Definitions
+C.2.4. XHTML Character Entities
+C.3. XHTML Module Implementations
+€.3.1. XHTML Core Modules
+C.3.2. Applet
+C.3.3. Text Modules
+C.3.4. Forms
+C.35. Tables
+C.3.6. Image
+C.3.7. Client-side Image Map
+C.3.8. Server-side Image Map
+C.3.9. Object
+C.3.10. Frames
+C.3.11. Target
+C.3.12. frame
+€.3.13. Intrinsic Events
+C.3.14. Metainformation
+C.3.15. Scripting
+C.3.16. Style Sheet
+C.3.17. Style Attribute
+C.3.18. Link
+C.3.19. Base
+C.3.20. Name Identification
+C.3.21. Legacy
+C.3.22. Ruby
+C.4. XHTML Schema Support Modules
+C.4.1. Block Phrasal
+C.4.2. Block Presentational
+C.4.3. Block Structural
+C.4.4. Inline Phrasal
+C.45. Inline Presentational
+C.4.6. Inline Structural
+C.4.7. Param
+C.4.8. Legacy - Miscellaneous
+D. Building DTD Modules
+D.1. Parameter Entity Naming
+D.2. Defining the Namespace of a Module
+D.2.1. Qualified Names sub-module
+D.2.2. Declaration sub-module(s)
+D.2.3. Using the module as a stand-alone DTD
+D.2.4. Namespace Idiosyncrasies
+E. Developing DTDs with defined and extended modules
+E.1. Defining additional attributes
+E.2. Defining additional elements
+E.3. Defining the content model for a collection of modules
+E.3.1. Integrating a stand-alone module into XHTML
+E.3.2. Mixing a new module throughout the modules in XHTML
+E.4. Creating. a new DTD
+E.4.1. Creating a simple DTD
+E.4.2. Creating a DTD by extending XHTML
+E.4.3. Creating a DTD by removing and replacing XHTML modules
+E.4.4. Creating a new DTD
+E.5. Using the new DTD
+F. XHTML DTD Module Implementations
+F.1. XHTML Character Entities
+F.1.1. XHTML Latin 1 Character Entities
+F.1.2. XHTML Special Characters
+F.1.3. XHTML Mathematical, Greek, and Symbolic Characters
+F.2. XHTML Modular Framework
+F.2.1. XHTML Base Architecture
+F.2.2. XHTML Notations
+F.2.3. XHTML Datatypes
+F.2.4. XHTML Common Attribute Definitions
+F.2.5. XHTML Qualified Names
+F.2.6. XHTML Character Entities
+F3. XHTML Module Implementations
+F.3.1. XHTML Core Modules
+F.3.2. Applet
+F.3.3. Text Modules
+F3.4. Forms
+F.3.5. Tables
+F3.6. Image
+F.3.7. Client-side Image Map
+F.3.8. Server-side Image Map
+F.3.9. Object
+F.3.10. Frames
+F3.11. Target
+F.3.12. frame
+F.3.13. Intrinsic Events
+F.3.14. Metainformation
+F.3.15. Scripting
+F.3.16. Style Sheet
+F3.17. Style Attribute
+F.3.18. Link
+F319. Base
+F.3.20. Name Identification
+F.3.21. Legacy
+F.4. XHTML DTD Support Modules
+F.4.1. Block Phrasal
+F.4.2. Block Presentational
+F.4.3. Block Structural
+F.4.4. Inline Phrasal
+F.4.5. Inline Presentational
+F.4.6. Inline Structural
+F4.7. Param
+F.4.8. Legacy Redeclarations
+G. References
+G.1. Normative References
+G.2. Informative References
+H. Design Goals
+H.1. Requirements
+H.1.1. Granularity
+H.1.2. Composibility
+H.1.3. Ease of Use
+H.1.4. Compatibility
+H.1.5. Conformance
+J. Acknowledgements
+1. Changes from XHTML Modularization 1.0
+next] [table of contents]

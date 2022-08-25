@@ -12,7 +12,7 @@ let urls = loadURLs();
 (async () => {
   const cluster = await Cluster.launch({
     concurrency: Cluster.CONCURRENCY_PAGE,
-    maxConcurrency: 2,
+    maxConcurrency: 5,
     puppeteerOptions: { headless: true, defaultViewport: false }
   });
 

@@ -5,7 +5,7 @@ async function getCID () {
 
   const storage = new Web3Storage({ token })
 
-    const files = await getFilesFromPath('web3-storage-quickstart/tester.txt')
+    const files = await getFilesFromPath('./web3-storage-quickstart/upload1.json')
 
   var cid = await storage.put(files);
   module.exports['cid']=cid; 

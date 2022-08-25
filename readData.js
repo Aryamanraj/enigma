@@ -1,6 +1,7 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 const Web3 = require('web3');
-const { interface } = require('./compile')
+const { interface } = require('./compile');
+const retrieve = require('./retrieve.cjs');
 
 const provider = new HDWalletProvider(
     'vote art pony convince labor valid cargo share battle sauce device common',
@@ -9,16 +10,17 @@ const provider = new HDWalletProvider(
 const web3 = new Web3(provider);
 
 var ethereumAddr = '0xDbf80420Ae83B419E1B2Fc6cAd84A6534129A155';
-var nameOfTheMedia = 'test1';
-
+var nameOfTheMedia = 'Dear Zindagi';
+var reader = '';
 const readFunc = async() =>{
     const accounts = await web3.eth.getAccounts();
 
     console.log('Reading data from account ID:', accounts[0], '\ton address', ethereumAddr);
     const enigmaView = await new web3.eth.Contract(JSON.parse(interface), ethereumAddr);
-    const reader = await enigmaView.methods.searchCID(nameOfTheMedia).call();
+    reader = await enigmaView.methods.searchCID(nameOfTheMedia).call();
     console.log('Your Character Identifier on IPFS is:', reader);
     provider.engine.stop();
+    retrieve(reader);
 }
 
 readFunc();

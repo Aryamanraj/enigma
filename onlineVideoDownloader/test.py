@@ -18,3 +18,8 @@ print(r.text)
 
 # import subprocess
 # subprocess.run(['ffmpeg','-i','vid1.ts','vid1.mp4'])
+
+blob:https://rabbitstream.net/e1308e63-e9d9-46ad-9d34-d38fb4b00998
+
+ffmpeg -i 'https://url/to/some/file.m3u8' -bsf:a aac_adtstoasc \
+    -vcodec copy -c copy -crf 50 file.mp4

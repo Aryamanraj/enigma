@@ -1,0 +1,543 @@
+(=) {Signup} =
+@ WeCodePixels / theia-sticky-sidebar | Pubic
+Q Notifications & Fork 199 wW Star 5290
+<> Code © Issues 14 T1 Pullrequests 2 © Actions [F Projects O Wiki a
+P master - cot fe Aout
+Glues your website's sidebars,
+Liviu Mirea Fix CSS link for Fo... 016 Jun 2020 ©61 — making them permanently visible
+while scrolling.
+& assets Update info about WordPres... years ago
+javascript ux scrolling sidebar
+& dist Recompile dist files, bump to. Sears 290 epstesdebars _stebarhelght
+® examples Fix CSS link for Foundation 5 2 years ago
+Readme
+& is Recompile dist files, bump to. Syears ago af MrT license
+ -editorconfig Add editorconfig file 4 years ago wy 529 stars
+D gitignore Update gitignore file ayearsago © 37 watching
+YF 199 forks
+( LICENSE.bt =~ Added readme, examples, lo... 9 years ago
+( README.md Fix links for examples 2 years ago
+Releases 3
+( bowerjson Added package,json, guipfile. 6 years ago
+© vise
+1 gulpfilejs Added package,json, guipfile. 6 years ago on 20 Nov 2016
+(1 packageson Recompile dist files, bump to. Syears ago +2 releases.
+[= README.md
+m Packages
+. : . No packages published
+@Theia Sticky Sidebar
+A JavaScript library that glues your website's sidebars (or Used by 161
+any vertical column for that matter), making them 588 eh oss
+permanently visible when scrolling up and down. Useful SL6Srer
+when a sidebar is too tall or too short compared to the rest
+of the content. Works with virtually any design and
+supports multiple sidebars. Contributors 9
+? WordPress 26 & a 3@
+Tela Sticky SIDEBAR ~
+for WordPress ~
+Languages
+=> Make your sidebars always visible. guag
+> Keep ads permanently csplayed Hesoen a
+= Eliminate white-space on scroll - © JavaScript 100.0%
+> Works with virtually any theme Cowewr + Bo
+> Uses your existing sidebars &
+Any layout- both ean ight ‘S)
+> ‘smooth and ful behovour —— a
+Also available as a premium WordPress plugin that comes
+with a user-friendly admin panel and supports a plethora
+of themes out-of-the-box.
+? Examples
+3 columns example
+4 columns example
+Bootstrap 4 example
+Foundation example
+2 Install
+@ Bower
+Ifyou are using Bower as your package manager:
+bower install theia-sticky-sidebar
+@NPM
+Ifyou are using NPM as your package manager:
+npm install theia-sticky-sidebar
+@ Usage
+Your website's HTML structure has to be similar to this in
+order to work:
+<div class="wrapper">
+<div class="content">
+<div class="theiaStickySidebar">
+</div>
+</div>
+<div class="sidebar">
+<div class="theiaStickySidebar">
+</div>
+</div>
+</div>
+Note that the inner "theiaStickySidebar’ divs are optional,
+but highly recommended. If you don't supply them
+yourself, the script will create them for you, but this can be
+problematic if you're using ads or iframes, since they will
+be moved around in the DOM and as a result will get
+reloaded.
+Note: Make sure to use <!poctyPE ntm1> in your page,
+otherwise you might run into weird issues.
+For the above example, you can use the following
+JavaScript:
+<script type="text/javascript" src="http://code. j
+<script type="text/javascript" src="dist /ResizeSe
+<script type="text/javascript" src="dist/theia-st
+<script type="text/javascript">
+JQuery (document) .ready(function() {
+jQuery(".content, .sidebar').theiaStickySideb
+// Settings
+additionalMarginTop: 30
+Yi
+Yi:
+</script>
+@ ResizeSensor
+Theia Sticky Sidebar uses the CSS Element Queries
+library to detect when your sidebars change height, so
+that it can recalculate their positions. This can happen if
+you are using an accordion, for example.
+You can choose not to include the ResizeSensor.min.js
+script in your page, in which case Theia Sticky Sidebar will
+continue to function (possibly even a bit smoother) but will
+not automatically detect height changes.
+@ Settings
+@ containerSelector
+The sidebar's container element. If not specified, it
+defaults to the sidebar's parent.
+@ additionalMarginTop
+An additional top margin in pixels. Defaults to 0.
+2 additionalMarginBottom
+An additional bottom margin in pixels. Defaults to 0.
+@ updateSidebarHeight
+Updates the sidebar's height. Use this if the background
+isn't showing properly, for example. Defaults to true.
+2 minWidth
+The sidebar returns to normal if its width is below this
+value. Useful for responsive designs. Defaults to 0.
+@ disableOnResponsiveLayouts
+Try to detect responsive layouts automatically and disable
+the sticky functionality on smaller screens. More exactly, it
+detects when the container and the sidebar are moved
+one on top of the other, instead of showing up side-by-
+side. Defaults to true.
+@ defaultPosition
+The sidebar must have a non-static position , as the
+inner sticky-sidebar uses position: absolute . Defaults
+to relative.
+? namespace
+Events are binded using a namespace, so that you may
+unbind them later on without affecting others. Defaults to
+TSS.
+? Credits
+Stock photos courtesy of Unsplash.com
+Terms Privacy Security Status Docs Contact GitHub Pricing API Training Blog About
+©) ©2022 cittiup, ine
+
+(=) {Signup} =
+@ WeCodePixels / theia-sticky-sidebar | Pubic
+Q Notifications & Fork 199 wW Star 5290
+<> Code © Issues 14 T1 Pullrequests 2 © Actions [F Projects O Wiki a
+P master - cot fe Aout
+Glues your website's sidebars,
+Liviu Mirea Fix CSS link for Fo... 016 Jun 2020 ©61 — making them permanently visible
+while scrolling.
+& assets Update info about WordPres... years ago
+javascript ux scrolling sidebar
+& dist Recompile dist files, bump to. Sears 290 epstesdebars _stebarhelght
+® examples Fix CSS link for Foundation 5 2 years ago
+Readme
+& is Recompile dist files, bump to. Syears ago af MrT license
+ -editorconfig Add editorconfig file 4 years ago wy 529 stars
+D gitignore Update gitignore file ayearsago © 37 watching
+YF 199 forks
+( LICENSE.bt =~ Added readme, examples, lo... 9 years ago
+( README.md Fix links for examples 2 years ago
+Releases 3
+( bowerjson Added package,json, guipfile. 6 years ago
+© vise
+1 gulpfilejs Added package,json, guipfile. 6 years ago on 20 Nov 2016
+(1 packageson Recompile dist files, bump to. Syears ago +2 releases.
+[= README.md
+m Packages
+. : . No packages published
+@Theia Sticky Sidebar
+A JavaScript library that glues your website's sidebars (or Used by 161
+any vertical column for that matter), making them 588 eh oss
+permanently visible when scrolling up and down. Useful SL6Srer
+when a sidebar is too tall or too short compared to the rest
+of the content. Works with virtually any design and
+supports multiple sidebars. Contributors 9
+? WordPress 26 & a 3@
+Tela Sticky SIDEBAR ~
+for WordPress ~
+Languages
+=> Make your sidebars always visible. guag
+> Keep ads permanently csplayed Hesoen a
+= Eliminate white-space on scroll - © JavaScript 100.0%
+> Works with virtually any theme Cowewr + Bo
+> Uses your existing sidebars &
+Any layout- both ean ight ‘S)
+> ‘smooth and ful behovour —— a
+Also available as a premium WordPress plugin that comes
+with a user-friendly admin panel and supports a plethora
+of themes out-of-the-box.
+? Examples
+3 columns example
+4 columns example
+Bootstrap 4 example
+Foundation example
+2 Install
+@ Bower
+Ifyou are using Bower as your package manager:
+bower install theia-sticky-sidebar
+@NPM
+Ifyou are using NPM as your package manager:
+npm install theia-sticky-sidebar
+@ Usage
+Your website's HTML structure has to be similar to this in
+order to work:
+<div class="wrapper">
+<div class="content">
+<div class="theiaStickySidebar">
+</div>
+</div>
+<div class="sidebar">
+<div class="theiaStickySidebar">
+</div>
+</div>
+</div>
+Note that the inner "theiaStickySidebar’ divs are optional,
+but highly recommended. If you don't supply them
+yourself, the script will create them for you, but this can be
+problematic if you're using ads or iframes, since they will
+be moved around in the DOM and as a result will get
+reloaded.
+Note: Make sure to use <!poctyPE ntm1> in your page,
+otherwise you might run into weird issues.
+For the above example, you can use the following
+JavaScript:
+<script type="text/javascript" src="http://code. j
+<script type="text/javascript" src="dist /ResizeSe
+<script type="text/javascript" src="dist/theia-st
+<script type="text/javascript">
+JQuery (document) .ready(function() {
+jQuery(".content, .sidebar').theiaStickySideb
+// Settings
+additionalMarginTop: 30
+Yi
+Yi:
+</script>
+@ ResizeSensor
+Theia Sticky Sidebar uses the CSS Element Queries
+library to detect when your sidebars change height, so
+that it can recalculate their positions. This can happen if
+you are using an accordion, for example.
+You can choose not to include the ResizeSensor.min.js
+script in your page, in which case Theia Sticky Sidebar will
+continue to function (possibly even a bit smoother) but will
+not automatically detect height changes.
+@ Settings
+@ containerSelector
+The sidebar's container element. If not specified, it
+defaults to the sidebar's parent.
+@ additionalMarginTop
+An additional top margin in pixels. Defaults to 0.
+2 additionalMarginBottom
+An additional bottom margin in pixels. Defaults to 0.
+@ updateSidebarHeight
+Updates the sidebar's height. Use this if the background
+isn't showing properly, for example. Defaults to true.
+2 minWidth
+The sidebar returns to normal if its width is below this
+value. Useful for responsive designs. Defaults to 0.
+@ disableOnResponsiveLayouts
+Try to detect responsive layouts automatically and disable
+the sticky functionality on smaller screens. More exactly, it
+detects when the container and the sidebar are moved
+one on top of the other, instead of showing up side-by-
+side. Defaults to true.
+@ defaultPosition
+The sidebar must have a non-static position , as the
+inner sticky-sidebar uses position: absolute . Defaults
+to relative.
+? namespace
+Events are binded using a namespace, so that you may
+unbind them later on without affecting others. Defaults to
+TSS.
+? Credits
+Stock photos courtesy of Unsplash.com
+Terms Privacy Security Status Docs Contact GitHub Pricing API Training Blog About
+©) ©2022 cittiup, ine
+
+(=) {Signup} =
+@ WeCodePixels / theia-sticky-sidebar | Pubic
+Q Notifications & Fork 199 wW Star 5290
+<> Code © Issues 14 T1 Pullrequests 2 © Actions [F Projects O Wiki a
+P master - cot fe Aout
+Glues your website's sidebars,
+Liviu Mirea Fix CSS link for Fo... 016 Jun 2020 ©61 — making them permanently visible
+while scrolling.
+& assets Update info about WordPres... years ago
+javascript ux scrolling sidebar
+& dist Recompile dist files, bump to. Sears 290 epstesdebars _stebarhelght
+® examples Fix CSS link for Foundation 5 2 years ago
+Readme
+& is Recompile dist files, bump to. Syears ago af MrT license
+ -editorconfig Add editorconfig file 4 years ago wy 529 stars
+D gitignore Update gitignore file ayearsago © 37 watching
+YF 199 forks
+( LICENSE.bt =~ Added readme, examples, lo... 9 years ago
+( README.md Fix links for examples 2 years ago
+Releases 3
+( bowerjson Added package,json, guipfile. 6 years ago
+© vise
+1 gulpfilejs Added package,json, guipfile. 6 years ago on 20 Nov 2016
+(1 packageson Recompile dist files, bump to. Syears ago +2 releases.
+[= README.md
+m Packages
+. : . No packages published
+@Theia Sticky Sidebar
+A JavaScript library that glues your website's sidebars (or Used by 161
+any vertical column for that matter), making them 588 eh oss
+permanently visible when scrolling up and down. Useful SL6Srer
+when a sidebar is too tall or too short compared to the rest
+of the content. Works with virtually any design and
+supports multiple sidebars. Contributors 9
+? WordPress 26 & a 3@
+Tela Sticky SIDEBAR ~
+for WordPress ~
+Languages
+=> Make your sidebars always visible. guag
+> Keep ads permanently csplayed Hesoen a
+= Eliminate white-space on scroll - © JavaScript 100.0%
+> Works with virtually any theme Cowewr + Bo
+> Uses your existing sidebars &
+Any layout- both ean ight ‘S)
+> ‘smooth and ful behovour —— a
+Also available as a premium WordPress plugin that comes
+with a user-friendly admin panel and supports a plethora
+of themes out-of-the-box.
+? Examples
+3 columns example
+4 columns example
+Bootstrap 4 example
+Foundation example
+2 Install
+@ Bower
+Ifyou are using Bower as your package manager:
+bower install theia-sticky-sidebar
+@NPM
+Ifyou are using NPM as your package manager:
+npm install theia-sticky-sidebar
+@ Usage
+Your website's HTML structure has to be similar to this in
+order to work:
+<div class="wrapper">
+<div class="content">
+<div class="theiaStickySidebar">
+</div>
+</div>
+<div class="sidebar">
+<div class="theiaStickySidebar">
+</div>
+</div>
+</div>
+Note that the inner "theiaStickySidebar’ divs are optional,
+but highly recommended. If you don't supply them
+yourself, the script will create them for you, but this can be
+problematic if you're using ads or iframes, since they will
+be moved around in the DOM and as a result will get
+reloaded.
+Note: Make sure to use <!poctyPE ntm1> in your page,
+otherwise you might run into weird issues.
+For the above example, you can use the following
+JavaScript:
+<script type="text/javascript" src="http://code. j
+<script type="text/javascript" src="dist /ResizeSe
+<script type="text/javascript" src="dist/theia-st
+<script type="text/javascript">
+JQuery (document) .ready(function() {
+jQuery(".content, .sidebar').theiaStickySideb
+// Settings
+additionalMarginTop: 30
+Yi
+Yi:
+</script>
+@ ResizeSensor
+Theia Sticky Sidebar uses the CSS Element Queries
+library to detect when your sidebars change height, so
+that it can recalculate their positions. This can happen if
+you are using an accordion, for example.
+You can choose not to include the ResizeSensor.min.js
+script in your page, in which case Theia Sticky Sidebar will
+continue to function (possibly even a bit smoother) but will
+not automatically detect height changes.
+@ Settings
+@ containerSelector
+The sidebar's container element. If not specified, it
+defaults to the sidebar's parent.
+@ additionalMarginTop
+An additional top margin in pixels. Defaults to 0.
+2 additionalMarginBottom
+An additional bottom margin in pixels. Defaults to 0.
+@ updateSidebarHeight
+Updates the sidebar's height. Use this if the background
+isn't showing properly, for example. Defaults to true.
+2 minWidth
+The sidebar returns to normal if its width is below this
+value. Useful for responsive designs. Defaults to 0.
+@ disableOnResponsiveLayouts
+Try to detect responsive layouts automatically and disable
+the sticky functionality on smaller screens. More exactly, it
+detects when the container and the sidebar are moved
+one on top of the other, instead of showing up side-by-
+side. Defaults to true.
+@ defaultPosition
+The sidebar must have a non-static position , as the
+inner sticky-sidebar uses position: absolute . Defaults
+to relative.
+? namespace
+Events are binded using a namespace, so that you may
+unbind them later on without affecting others. Defaults to
+TSS.
+? Credits
+Stock photos courtesy of Unsplash.com
+Terms Privacy Security Status Docs Contact GitHub Pricing API Training Blog About
+©) ©2022 cittiup, ine
+
+(=) {Signup} =
+@ WeCodePixels / theia-sticky-sidebar | Pubic
+Q Notifications & Fork 199 wW Star 5290
+<> Code © Issues 14 T1 Pullrequests 2 © Actions [F Projects O Wiki a
+P master - cot fe Aout
+Glues your website's sidebars,
+Liviu Mirea Fix CSS link for Fo... 016 Jun 2020 ©61 — making them permanently visible
+while scrolling.
+& assets Update info about WordPres... years ago
+javascript ux scrolling sidebar
+& dist Recompile dist files, bump to. Sears 290 epstesdebars _stebarhelght
+® examples Fix CSS link for Foundation 5 2 years ago
+Readme
+& is Recompile dist files, bump to. Syears ago af MrT license
+ -editorconfig Add editorconfig file 4 years ago wy 529 stars
+D gitignore Update gitignore file ayearsago © 37 watching
+YF 199 forks
+( LICENSE.bt =~ Added readme, examples, lo... 9 years ago
+( README.md Fix links for examples 2 years ago
+Releases 3
+( bowerjson Added package,json, guipfile. 6 years ago
+© vise
+1 gulpfilejs Added package,json, guipfile. 6 years ago on 20 Nov 2016
+(1 packageson Recompile dist files, bump to. Syears ago +2 releases.
+[= README.md
+m Packages
+. : . No packages published
+@Theia Sticky Sidebar
+A JavaScript library that glues your website's sidebars (or Used by 161
+any vertical column for that matter), making them 588 eh oss
+permanently visible when scrolling up and down. Useful SL6Srer
+when a sidebar is too tall or too short compared to the rest
+of the content. Works with virtually any design and
+supports multiple sidebars. Contributors 9
+? WordPress 26 & a 3@
+Tela Sticky SIDEBAR ~
+for WordPress ~
+Languages
+=> Make your sidebars always visible. guag
+> Keep ads permanently csplayed Hesoen a
+= Eliminate white-space on scroll - © JavaScript 100.0%
+> Works with virtually any theme Cowewr + Bo
+> Uses your existing sidebars &
+Any layout- both ean ight ‘S)
+> ‘smooth and ful behovour —— a
+Also available as a premium WordPress plugin that comes
+with a user-friendly admin panel and supports a plethora
+of themes out-of-the-box.
+? Examples
+3 columns example
+4 columns example
+Bootstrap 4 example
+Foundation example
+2 Install
+@ Bower
+Ifyou are using Bower as your package manager:
+bower install theia-sticky-sidebar
+@NPM
+Ifyou are using NPM as your package manager:
+npm install theia-sticky-sidebar
+@ Usage
+Your website's HTML structure has to be similar to this in
+order to work:
+<div class="wrapper">
+<div class="content">
+<div class="theiaStickySidebar">
+</div>
+</div>
+<div class="sidebar">
+<div class="theiaStickySidebar">
+</div>
+</div>
+</div>
+Note that the inner "theiaStickySidebar’ divs are optional,
+but highly recommended. If you don't supply them
+yourself, the script will create them for you, but this can be
+problematic if you're using ads or iframes, since they will
+be moved around in the DOM and as a result will get
+reloaded.
+Note: Make sure to use <!poctyPE ntm1> in your page,
+otherwise you might run into weird issues.
+For the above example, you can use the following
+JavaScript:
+<script type="text/javascript" src="http://code. j
+<script type="text/javascript" src="dist /ResizeSe
+<script type="text/javascript" src="dist/theia-st
+<script type="text/javascript">
+JQuery (document) .ready(function() {
+jQuery(".content, .sidebar').theiaStickySideb
+// Settings
+additionalMarginTop: 30
+Yi
+Yi:
+</script>
+@ ResizeSensor
+Theia Sticky Sidebar uses the CSS Element Queries
+library to detect when your sidebars change height, so
+that it can recalculate their positions. This can happen if
+you are using an accordion, for example.
+You can choose not to include the ResizeSensor.min.js
+script in your page, in which case Theia Sticky Sidebar will
+continue to function (possibly even a bit smoother) but will
+not automatically detect height changes.
+@ Settings
+@ containerSelector
+The sidebar's container element. If not specified, it
+defaults to the sidebar's parent.
+@ additionalMarginTop
+An additional top margin in pixels. Defaults to 0.
+2 additionalMarginBottom
+An additional bottom margin in pixels. Defaults to 0.
+@ updateSidebarHeight
+Updates the sidebar's height. Use this if the background
+isn't showing properly, for example. Defaults to true.
+2 minWidth
+The sidebar returns to normal if its width is below this
+value. Useful for responsive designs. Defaults to 0.
+@ disableOnResponsiveLayouts
+Try to detect responsive layouts automatically and disable
+the sticky functionality on smaller screens. More exactly, it
+detects when the container and the sidebar are moved
+one on top of the other, instead of showing up side-by-
+side. Defaults to true.
+@ defaultPosition
+The sidebar must have a non-static position , as the
+inner sticky-sidebar uses position: absolute . Defaults
+to relative.
+? namespace
+Events are binded using a namespace, so that you may
+unbind them later on without affecting others. Defaults to
+TSS.
+? Credits
+Stock photos courtesy of Unsplash.com
+Terms Privacy Security Status Docs Contact GitHub Pricing API Training Blog About
+©) ©2022 cittiup, ine

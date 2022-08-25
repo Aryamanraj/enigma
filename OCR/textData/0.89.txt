@@ -1,0 +1,207 @@
+ReadDetails
+eo ,
+lenu »
+dy od
+Search projects Q
+PyOpenGraph 0.2
+pip install PyOpenGraph if
+v | Latestversion
+Released: May 8, 2010
+PyOpenGraphis a library written in Python for parsing Open Graph protocol information from web
+sites.
+= Project description
+© Project details
+‘D Release history
+& Download files
+Project description
+PyOpenGraph is a library written in Python for parsing Open Graph protocol information from web sites.
+Learn more about the protocol at
+http://opengraphprotocoLorg
+Installation
+To install, download the archive at http://pypipython.org/pypi/PyOpenGraph and decompress, run python setup.py
+install
+Usage
+‘import PyOpenGraph
+og = PyOpenGraph( "http: //mww. rottentomatoes .com/m/10011268-oceans/")
+print og.metadata # => {'url': ‘http: //mm.rottentomatoes.com/m/10011268-oceans/', 'site_name’
+print og.metadata['title'] # => Oceans
+og-is_valid() # => return True or False
+Help About PyPI Contributing to PyPI
+Installing packages PyPl on Twitter @ Bugs and feedback
+Uploading packages % Infrastructure dashboard & Contribute on GitHub
+User guide Z Package index name retention Z Translate PyPI
+FAQs Our sponsors Development credits 2
+Using PyPI
+Code of conduct &
+Report security issue
+Privacy policy &
+Terms of use
+Status: All Systems Operational
+Developed and maintained by the Python community, for the Python community
+Donate today!
+© 2022 Python Software Foundation &
+Site map
+Switch to desktop version
+> English espafiol francais FH portugués(Brasil) yxpainicexa EMnvind Deutsch PIC(RIDK) PIC(BEHE) —pycenult
+may esperanto
+Facebook Google
+aws Datadog Instagram Fastly ObjectStorageand —Huawei_-—Microsoft NIA
+Cloud computing Monitoring PSF Sponsor CDN DownloadAnalytics PSFSponsor PSFSponsor PSF Sponsor
+Pingdom Salesforce Sentry _—StatusPage
+Monitoring PSF-Sponsor Errorlogeing Status page
+
+ReadDetails
+eo ,
+lenu »
+dy od
+Search projects Q
+PyOpenGraph 0.2
+pip install PyOpenGraph if
+v | Latestversion
+Released: May 8, 2010
+PyOpenGraphis a library written in Python for parsing Open Graph protocol information from web
+sites.
+= Project description
+© Project details
+‘D Release history
+& Download files
+Project description
+PyOpenGraph is a library written in Python for parsing Open Graph protocol information from web sites.
+Learn more about the protocol at
+http://opengraphprotocoLorg
+Installation
+To install, download the archive at http://pypipython.org/pypi/PyOpenGraph and decompress, run python setup.py
+install
+Usage
+‘import PyOpenGraph
+og = PyOpenGraph( "http: //mww. rottentomatoes .com/m/10011268-oceans/")
+print og.metadata # => {'url': ‘http: //mm.rottentomatoes.com/m/10011268-oceans/', 'site_name’
+print og.metadata['title'] # => Oceans
+og-is_valid() # => return True or False
+Help About PyPI Contributing to PyPI
+Installing packages PyPl on Twitter @ Bugs and feedback
+Uploading packages % Infrastructure dashboard & Contribute on GitHub
+User guide Z Package index name retention Z Translate PyPI
+FAQs Our sponsors Development credits 2
+Using PyPI
+Code of conduct &
+Report security issue
+Privacy policy &
+Terms of use
+Status: All Systems Operational
+Developed and maintained by the Python community, for the Python community
+Donate today!
+© 2022 Python Software Foundation &
+Site map
+Switch to desktop version
+> English espafiol francais FH portugués(Brasil) yxpainicexa EMnvind Deutsch PIC(RIDK) PIC(BEHE) —pycenult
+may esperanto
+Facebook Google
+aws Datadog Instagram Fastly ObjectStorageand —Huawei_-—Microsoft NIA
+Cloud computing Monitoring PSF Sponsor CDN DownloadAnalytics PSFSponsor PSFSponsor PSF Sponsor
+Pingdom Salesforce Sentry _—StatusPage
+Monitoring PSF-Sponsor Errorlogeing Status page
+
+ReadDetails
+eo ,
+lenu »
+dy od
+Search projects Q
+PyOpenGraph 0.2
+pip install PyOpenGraph if
+v | Latestversion
+Released: May 8, 2010
+PyOpenGraphis a library written in Python for parsing Open Graph protocol information from web
+sites.
+= Project description
+© Project details
+‘D Release history
+& Download files
+Project description
+PyOpenGraph is a library written in Python for parsing Open Graph protocol information from web sites.
+Learn more about the protocol at
+http://opengraphprotocoLorg
+Installation
+To install, download the archive at http://pypipython.org/pypi/PyOpenGraph and decompress, run python setup.py
+install
+Usage
+‘import PyOpenGraph
+og = PyOpenGraph( "http: //mww. rottentomatoes .com/m/10011268-oceans/")
+print og.metadata # => {'url': ‘http: //mm.rottentomatoes.com/m/10011268-oceans/', 'site_name’
+print og.metadata['title'] # => Oceans
+og-is_valid() # => return True or False
+Help About PyPI Contributing to PyPI
+Installing packages PyPl on Twitter @ Bugs and feedback
+Uploading packages % Infrastructure dashboard & Contribute on GitHub
+User guide Z Package index name retention Z Translate PyPI
+FAQs Our sponsors Development credits 2
+Using PyPI
+Code of conduct &
+Report security issue
+Privacy policy &
+Terms of use
+Status: All Systems Operational
+Developed and maintained by the Python community, for the Python community
+Donate today!
+© 2022 Python Software Foundation &
+Site map
+Switch to desktop version
+> English espafiol francais FH portugués(Brasil) yxpainicexa EMnvind Deutsch PIC(RIDK) PIC(BEHE) —pycenult
+may esperanto
+Facebook Google
+aws Datadog Instagram Fastly ObjectStorageand —Huawei_-—Microsoft NIA
+Cloud computing Monitoring PSF Sponsor CDN DownloadAnalytics PSFSponsor PSFSponsor PSF Sponsor
+Pingdom Salesforce Sentry _—StatusPage
+Monitoring PSF-Sponsor Errorlogeing Status page
+
+ReadDetails
+eo ,
+lenu »
+dy od
+Search projects Q
+PyOpenGraph 0.2
+pip install PyOpenGraph if
+v | Latestversion
+Released: May 8, 2010
+PyOpenGraphis a library written in Python for parsing Open Graph protocol information from web
+sites.
+= Project description
+© Project details
+‘D Release history
+& Download files
+Project description
+PyOpenGraph is a library written in Python for parsing Open Graph protocol information from web sites.
+Learn more about the protocol at
+http://opengraphprotocoLorg
+Installation
+To install, download the archive at http://pypipython.org/pypi/PyOpenGraph and decompress, run python setup.py
+install
+Usage
+‘import PyOpenGraph
+og = PyOpenGraph( "http: //mww. rottentomatoes .com/m/10011268-oceans/")
+print og.metadata # => {'url': ‘http: //mm.rottentomatoes.com/m/10011268-oceans/', 'site_name’
+print og.metadata['title'] # => Oceans
+og-is_valid() # => return True or False
+Help About PyPI Contributing to PyPI
+Installing packages PyPl on Twitter @ Bugs and feedback
+Uploading packages % Infrastructure dashboard & Contribute on GitHub
+User guide Z Package index name retention Z Translate PyPI
+FAQs Our sponsors Development credits 2
+Using PyPI
+Code of conduct &
+Report security issue
+Privacy policy &
+Terms of use
+Status: All Systems Operational
+Developed and maintained by the Python community, for the Python community
+Donate today!
+© 2022 Python Software Foundation &
+Site map
+Switch to desktop version
+> English espafiol francais FH portugués(Brasil) yxpainicexa EMnvind Deutsch PIC(RIDK) PIC(BEHE) —pycenult
+may esperanto
+Facebook Google
+aws Datadog Instagram Fastly ObjectStorageand —Huawei_-—Microsoft NIA
+Cloud computing Monitoring PSF Sponsor CDN DownloadAnalytics PSFSponsor PSFSponsor PSF Sponsor
+Pingdom Salesforce Sentry _—StatusPage
+Monitoring PSF-Sponsor Errorlogeing Status page

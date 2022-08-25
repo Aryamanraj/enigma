@@ -1,7 +1,7 @@
 import re
-from math import log10
 import os
-preset = ["free","movie","hd", 'download', 'd0wnl0ad' ]
+import json
+preset = ["free","movie","hd", 'download', 'd0wnl0ad', 'watch' ]
 def allkeys(keywrd):
     global preset
     s = set(preset)
@@ -24,7 +24,27 @@ def opening(f,preset):
                     rating+=min(check.count(i),check.count(j))
     if rating == 0:
         return (rating,f)
-    return (log10(rating)+1,f)
+    return (rating,f)
 allkeys(["thor"])
-for i in os.listdir('./textData'):
-    print(opening('./textData/'+str(i),preset))
+l = []
+for i in list(sorted(os.listdir('./textData'))):
+    x = (opening('./textData/'+str(i),preset))
+    if x[0] !=0:
+        l.append(x)
+for i in l:
+    print(i)
+keysss = set()
+for i,j in l:
+    keysss.add(j[11])
+#print(keysss)
+
+
+for i in keysss:
+    JSONimport = open('url.json')
+    dataload = json.load(JSONimport)
+    dictJSON = dataload[0]
+    keysJSON = list(dictJSON.keys())
+    keyJSON = keysJSON[int(i)]
+
+    print('===================')
+    print('Suspected links:\n'+keyJSON)
