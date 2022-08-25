@@ -25,6 +25,8 @@
     "ganache-cli": "^6.12.2",
     "mocha": "^10.0.0",
     "node-fetch": "^2.6.1",
+    "puppeteer": "^16.2.0",
+    "puppeteer-cluster": "^0.23.0",
     "solc": "^0.4.17",
     "web3": "^1.7.5",
     "web3.storage": "^4.3.0"
