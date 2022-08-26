@@ -10,17 +10,21 @@ const provider = new HDWalletProvider(
 const web3 = new Web3(provider);
 
 var ethereumAddr = '0xDbf80420Ae83B419E1B2Fc6cAd84A6534129A155';
-var nameOfTheMedia = 'Avengers';
+var nameOfTheMedia = ['Avengers', 'Dear Zindagi'];
 var reader = '';
-const readFunc = async() =>{
+const readFunc = async(element) =>{
     const accounts = await web3.eth.getAccounts();
 
-    console.log('Reading data from account ID:', accounts[0], '\ton address', ethereumAddr);
+    //console.log('Reading data from account ID:', accounts[0], '\ton address', ethereumAddr);
     const enigmaView = await new web3.eth.Contract(JSON.parse(interface), ethereumAddr);
-    reader = await enigmaView.methods.searchCID(nameOfTheMedia).call();
-    console.log('Your Character Identifier on IPFS is:', reader);
+    reader = await enigmaView.methods.searchCID(element).call();
+    //console.log('Your Character Identifier on IPFS is:', reader);
     provider.engine.stop();
-    retrieve(reader, nameOfTheMedia);
+    retrieve(reader, element); 
 }
 
-readFunc();
+for (let index = 0; index < nameOfTheMedia.length; index++) {
+    const element = nameOfTheMedia[index];
+    readFunc(element)
+}
+//readFunc();

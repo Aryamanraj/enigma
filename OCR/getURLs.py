@@ -55,7 +55,7 @@ def funcKaNaam(query, movieKaNaam,index):
         y = {newx[0]:newx}
         #print(y)
         lst.append(y)
-    filename = '../URLkaJSON/'+movieKaNaam+index+'.json'
+    filename = './URLkaJSON/'+movieKaNaam+index+'.json'
     with open(filename, 'w') as f:
         f.write('')
     
@@ -68,7 +68,7 @@ def funcKaNaam(query, movieKaNaam,index):
 
 def differentCombinations(movieKaNaam):
     index=0
-    listOfCombinations = ["free movie download ", "watch online free ", "full movie download "]
+    listOfCombinations = ["free movie download ", "watch online free "]
     for i in listOfCombinations:    
         funcKaNaam(i+movieKaNaam, movieKaNaam,str(index))
         index=index+1
