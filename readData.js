@@ -10,7 +10,7 @@ const provider = new HDWalletProvider(
 const web3 = new Web3(provider);
 
 var ethereumAddr = '0xDbf80420Ae83B419E1B2Fc6cAd84A6534129A155';
-var nameOfTheMedia = 'RRR';
+var nameOfTheMedia = 'Avengers';
 var reader = '';
 const readFunc = async() =>{
     const accounts = await web3.eth.getAccounts();

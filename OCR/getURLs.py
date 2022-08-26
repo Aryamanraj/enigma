@@ -74,7 +74,7 @@ def differentCombinations(movieKaNaam):
         index=index+1
 
 
-for i in list(sorted(os.listdir('../JSONwaleFiles')))[:2]:
+for i in list(sorted(os.listdir('../JSONwaleFiles'))):
     fileReader = open('../JSONwaleFiles/'+i)
     dataaa = json.load(fileReader)
     movieKaNaam = dataaa['movieName']
