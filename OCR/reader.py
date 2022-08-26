@@ -78,13 +78,13 @@ def fin():
 
                 bOfImage = str(pytesseract.image_to_string(image, config=custom_config))
 
-                cOfImage = str(pytesseract.image_to_string(image, config=custom_config))
+                #cOfImage = str(pytesseract.image_to_string(image, config=custom_config))
 
-                dOfImage = str(pytesseract.image_to_string(image, config=custom_config))
+                #dOfImage = str(pytesseract.image_to_string(image, config=custom_config))
 
                 j = os.path.splitext(i)[0]
                 newfile = open("./textData/" + str(j) + ".txt", 'w')
-                newfile.write(aOfImage + "\n" + bOfImage + "\n" + cOfImage + "\n" + dOfImage)
+                newfile.write(aOfImage + "\n" + bOfImage)
                 newfile.close()
 pro1 = Process(target=fin)
 pro1.start()

@@ -20,7 +20,7 @@ function pushing(){
 }
 pushing()
 var ethereumAddr = '0xDbf80420Ae83B419E1B2Fc6cAd84A6534129A155';
-var nameOfTheMedia = 'Dear Zindagi';
+var nameOfTheMedia = 'RRR';
 
 // const deploy = async () => {
 //     const accounts = await web3.eth.getAccounts();

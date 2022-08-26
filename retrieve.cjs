@@ -23,7 +23,7 @@ function makeStorageClient () {
   return new Web3Storage({ token: getAccessToken() })
 }
 
-module.exports = async function retrieve (cid) {
+module.exports = async function retrieve (cid, nameOfTheMedia) {
     const client = makeStorageClient()
     const res = await client.get(cid)
     console.log(`Got a response! [${res.status}] ${res.statusText}`)
@@ -38,7 +38,7 @@ module.exports = async function retrieve (cid) {
       return result;
   }
       let beta = await getData();
-      fs.writeFile("retrieved.json",JSON.stringify(beta),()=>{console.log('running')});
+      fs.writeFile(`./JSONwaleFiles/${nameOfTheMedia}.json`,JSON.stringify(beta),()=>{console.log('running')});
 
 
       // let gamma = JSON.stringify(beta);

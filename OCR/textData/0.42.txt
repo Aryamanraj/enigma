@@ -1,7 +1,0 @@
-{"details": {}, "type" :"ok"}
-
-{"details": {}, "type" :"ok"}
-
-{"details": {}, "type" :"ok"}
-
-{"details": {}, "type" :"ok"}
