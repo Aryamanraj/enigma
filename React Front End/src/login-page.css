@@ -1,0 +1,221 @@
+.login-page{
+    background: linear-gradient(101.67deg, #000000 0%, #0A001C 100%);
+    padding-bottom: 6rem;
+    /* height: 100%; */
+}
+.loginNav{
+    padding: 0 326px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    position: relative;
+    z-index: 2;
+}
+.loginNav-logo{
+   /* width: 150px;
+   height: 125px; */
+   width: 18%;
+   transform: rotate(-0.78deg);
+}
+.navigation-link{
+    position: relative;
+    top: 3rem;
+    right:2.7rem;
+}
+.navigation-bar{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 29px;
+letter-spacing: 0.2em;
+text-decoration: none;
+color: #FFFFFF;
+
+}
+.selected{
+    font-weight: 600;
+}
+.loginNav-logo-txt{
+   font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+padding-left: 0px;
+line-height: 61px;
+letter-spacing: 0.2em;
+color: #ffffff;
+white-space: nowrap;
+text-align: left;
+position: relative;
+right: 160px;
+bottom: 7px;
+transform: rotate(0.38deg);
+}
+.loginNav-about{
+   font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 29px;
+letter-spacing: 0.2em;
+
+color: #ffffff;
+text-decoration: none;
+margin-left: 200px;
+}
+.loginNav-contact{
+   font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 29px;
+letter-spacing: 0.2em;
+margin-left: 50px;
+color: #ffffff;
+text-decoration: none;
+text-align: center;
+white-space: nowrap;
+}
+.loginNav-login{
+    background: linear-gradient(94.12deg, #6D2ADA 17.67%, #2D2BA4 68.68%);
+border-radius: 23px;
+margin-left: 50px;
+height: fit-content;
+padding: 6px 15px;
+}
+.loginNav-login:hover{
+    box-shadow: 2.5px 0px 10px 6px rgba(200, 151, 250, 0.52);
+}
+.loginNav-login-txt{
+   font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 29px;
+letter-spacing: 0.2em;
+text-decoration: none;
+color: #FFFFFF;
+text-align: left;
+white-space: nowrap;
+}
+.login-page > h1{
+    
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 800;
+font-size: 26px;
+line-height: 39px;
+/* identical to box height */
+text-align: center;
+margin-top: 6rem;
+padding-bottom: 2rem;
+letter-spacing: 0.1em;
+
+color: #FFFFFF;
+
+}
+.login-container{
+    background: linear-gradient(116.92deg, rgba(255, 255, 255, 0.4) 10.83%, rgba(198, 194, 194, 0.1) 80.06%);
+box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+backdrop-filter: blur(20px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 11px;
+text-align: center;
+margin: auto;
+width: 23rem;
+height: 13rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-bottom: 2rem;
+}
+.login-input{
+    background: linear-gradient(116.92deg, rgba(255, 255, 255, 0.4) 10.83%, rgba(198, 194, 194, 0.1) 80.06%);
+box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+backdrop-filter: blur(20px);
+/* Note: backdrop-filter has minimal browser support */
+margin-bottom: 2rem;
+border-radius: 10px;
+border: none;
+width: 16rem;
+height: 3rem;
+color: #fff;
+font-weight: 500;
+font-size: 17px;
+letter-spacing: 2px;
+text-indent: 10px;
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-btn{
+    background: linear-gradient(94.12deg, #6D2ADA 17.67%, #2D2BA4 68.68%);
+border-radius: 23px;
+border: none;
+width: 6rem;
+height: 2rem;
+/* text-align: center; */
+margin-right: 1rem;
+
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+letter-spacing: 0.1em;
+
+color: #FFFFFF;
+cursor: pointer;
+}
+.login-btn:hover{
+    box-shadow: 2.5px 0px 10px 6px rgba(200, 151, 250, 0.52);
+}
+.icon{
+        color: white;
+        position: absolute;
+        top: 57%;
+        right: 18%;
+    cursor: pointer;
+}
+.icon:hover {
+    color:#5c65cb;
+    cursor: pointer;
+  }
+.cylinder-img{
+    width: 20%;
+    position: absolute;
+    /* top: -2.7rem ; */
+    top: -6%;
+    /* left: 7rem; */
+    left: 15%;
+}
+.gear-img{
+    width: 36%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+::placeholder {
+    
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+text-align: center;
+line-height: 24px;
+letter-spacing: 0.1em;
+
+color: #FFFFFF;
+
+mix-blend-mode: normal;
+  }

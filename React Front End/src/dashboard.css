@@ -1,0 +1,144 @@
+.dashboard{
+    background: linear-gradient(101.67deg, #01423A 0%, #010A3A 100%);
+    height: 100%;
+    width: 100vw;
+    padding-top: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.dash-ac{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 64px;
+line-height: 78px;
+/* identical to box height */
+
+letter-spacing: 0.2em;
+
+color: #FFFFFF;
+}
+.dash-username{
+    background: linear-gradient(116.92deg, rgba(255, 255, 255, 0.4) 10.83%, rgba(198, 194, 194, 0.1) 80.06%);
+box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+backdrop-filter: blur(20px);
+/* Note: backdrop-filter has minimal browser support */
+/* margin-top: 3%; */
+border-radius: 33px;
+height: 10rem;
+width: 70rem;
+display: inline-block;
+margin-right: 5rem;
+}
+.dash-username > h1{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 54px;
+line-height: 78px;
+/* identical to box height */
+
+letter-spacing: 0.2em;
+
+color: #FFFFFF;
+ margin-left: 8rem;
+ /* padding-top: 2.5rem; */
+}
+.dash-upload {
+    background: linear-gradient(116.92deg, rgba(155, 79, 202, 0.37) 10.83%, #D67BF7 80.06%);
+box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+backdrop-filter: blur(20px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 33px;
+display: inline-block;
+width: 25rem;
+height: 10rem;
+position: relative;
+top: 1.5rem;
+}
+.dash-upload > h1{
+    font-family: 'Montserrat';
+    padding-left: 1.5rem;
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 49px;
+/* identical to box height */
+
+letter-spacing: 0.1em;
+
+color: #FFFFFF;
+
+}
+.dash-upload-btn{
+    background: linear-gradient(180deg, #2F0659 0%, rgba(129, 3, 116, 0) 100%);
+border-radius: 56.5px;
+/* width: 7rem;
+height: 3rem; */
+margin-left: 1rem;
+border: none;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 29px;
+letter-spacing: 0.1em;
+cursor: pointer;
+
+color: #FFFFFF;
+padding: 10px 10px;
+}
+.dash-data-container{
+    background: linear-gradient(116.92deg, rgba(255, 255, 255, 0.4) 10.83%, rgba(198, 194, 194, 0.1) 80.06%);
+box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+backdrop-filter: blur(20px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 33px;
+width: 100rem;
+padding: 2rem 5rem;
+margin-top: 4rem;
+}
+.dash-data-container > h1{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 44px;
+line-height: 78px;
+/* identical to box height */
+
+letter-spacing: 0.2em;
+
+color: #FFFFFF;
+
+}
+.dash-data{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 4rem;
+}
+.dash-data-entry{
+    background: linear-gradient(116.92deg, rgba(255, 255, 255, 0.4) 10.83%, rgba(198, 194, 194, 0.1) 80.06%);
+box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+backdrop-filter: blur(20px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 33px;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 30px;
+line-height: 49px;
+/* identical to box height */
+
+letter-spacing: 0.2em;
+
+color: #FFFFFF;
+display: inline-block;
+padding: 1rem;
+}
+.flag{
+    text-align: center;
+    padding-top: 3rem;
+}

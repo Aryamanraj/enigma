@@ -1,0 +1,133 @@
+.upload-page{
+    background: linear-gradient(104.15deg, #000000 1.39%, #0C0B4B 51.02%, #2D2BA4 100%);
+    height: 100vh;
+    width: 100vw;
+    padding: 0 5%;
+}
+.column{
+    width: 50%;
+    display: inline-block;
+}
+.upload-file > h1{
+    margin-top: 3rem;
+    margin-left: .5rem;
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 30px;
+line-height: 49px;
+/* identical to box height */
+
+letter-spacing: 0.2em;
+
+color: #FFFFFF;
+
+}
+.file-uploader{
+    background: linear-gradient(180deg, #D372F4 0%, rgba(109, 222, 247, 0.54) 100%);
+border-radius: 57px;
+height: 27rem;
+width: 27rem;
+text-align: center;
+justify-content: center;
+
+}
+.upload-img{
+    margin-top: 15%;
+    width: 70%;
+}
+.upload-btn{
+    width: 8rem;
+    text-align: center;
+    height: 2.5rem;
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 44px;
+    /* identical to box height */
+    
+    letter-spacing: 0.2em;
+    
+    color: #FFFFFF;
+    background: linear-gradient(181.27deg, rgba(135, 65, 250, 0.88) 30.77%, #D527F1 98.91%);
+/* filter: blur(4px); */
+border: none;
+border-radius: 48.5px;
+}
+.input-upload{
+    position: absolute;
+    top: 28.5rem;
+    left: 14.5rem;
+    opacity: 0;
+}
+.upload-details{
+    /* height: 50%; */
+    /* position: relative;
+bottom: 16rem; */
+}
+.upload-details > h1{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 30px;
+/* position: relative;
+bottom: 16rem; */
+line-height: 49px;
+/* identical to box height */
+
+letter-spacing: 0.2em;
+
+color: #FFFFFF;
+
+}
+.upload-label{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 37px;
+/* identical to box height */
+
+letter-spacing: 0.2em;
+
+color: #FFFFFF;
+display: block;
+}
+.upload-box{
+    background: linear-gradient(180deg, rgba(161, 80, 242, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
+    border: none;
+    height: 1.8rem;
+    width: 12rem;
+}
+.upload-form{
+    display: grid;
+    grid-template: 60px 60px / 1fr 1fr;
+}
+.span-col{
+    grid-column: -1 / 1;
+}
+.widen{
+    width: 30rem;
+}
+.uploadPage-btn{
+    background: linear-gradient(180deg, #403EF9 0%, #D527F1 100%);
+border-radius: 36px;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+margin-top: 2rem;
+border: none;
+font-size: 18px;
+padding: 1% 2%;
+line-height: 37px;
+/* identical to box height */
+
+letter-spacing: 0.2em;
+
+color: #FFFFFF;
+}
