@@ -7,8 +7,6 @@ This project combines Ethereum-based copyright storage with a web crawler that u
 - [Project Overview](#project-overview)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Project Overview
 The goal of this project is to create a decentralized copyright storage system using the Ethereum blockchain. It allows users to store copyright information securely and immutably. Additionally, the project includes a web crawler that scans websites for potential copyright infringement using various techniques such as Puppeteer, regex pattern matching, DFS, and OCR.
